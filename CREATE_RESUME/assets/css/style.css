@@ -1,0 +1,64 @@
+/* Universale css*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* all body css */
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+/* main div css */
+.Resume-main {
+  width: 1020px;
+  min-height: 600px;
+  background-color: white;
+  border-left: 20px solid #e84653;
+  font-family: "Poppins", sans-serif;
+}
+/* main table css */
+.main-table {
+  width: 100%;
+  margin: 50px;
+}
+
+.heading-info-left {
+  font-size: 43px;
+  color: #dd465b;
+  font-weight: bold;
+}
+
+/* all spane tage css */
+.heading-line-info {
+  color: #b56974;
+}
+.heading-info-right {
+  text-align: left;
+}
+
+/*  yperlink css */
+.hyperlink {
+  color: #bc8c87;
+  text-decoration: none;
+}
+
+/* lside bar css */
+
+.body-heading-postion{
+  position: relative;
+  color: #c64b5a;
+  font-size: 20px;
+  text-align: right;
+}
+.heading-position {
+  position: absolute;
+  top: 0px;
+  right: 65px;
+  font-size: 14px;
+  flood-color: #c64b5a;
+}
