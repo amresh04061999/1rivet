@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/47ac11d93a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Dasboard</title>
+  </head>
+
+  <body>
+    <!-- main wapper -->
+    <div class="d-flex flex-column h-100">
+      <!-- =========== Start header ============ -->
+      <header class="main-header flex-grow-1 w-100">
+        <!-- ===========  Start Wrapper brand icon logo or  Searchbar or ============ -->
+        <div class="d-flex justify-content-between align-item-center">
+          <!-- ===========  Start Wrapper brand icon logo or  Searchbar ============ -->
+          <div class="d-flex justify-content-between align-item-center">
+            <!-- ===========  Start brand icon logo  ============ -->
+            <div>
+              <label for="toggleSideBar">
+                <span class="fa-solid fa-bars icon c-pointe header-icon-toggle icon-hover">
+                </span>
+              </label>
+            </div>
+            <!-- ===========  End brand icon logo ============ -->
+            <!-- ===========  Start search bar ============ -->
+            <div class="align-item-wrapper">
+              <div class="search-box">
+                <label for="search">
+                  <span
+                    class="fa-solid fa-magnifying-glass icon-search icon-aside c-pointer"
+                  ></span
+                ></label>
+                <input
+                  type="text"
+                  id="search"
+                  class="all-unset c-pointer"
+                  placeholder="Please Search"
+                />
+                <button class="btn all-unset c-pointer">Search</button>
+              </div>
+            </div>
+
+            <!-- ===========  End search bar ============ -->
+          </div>
+          <!-- ===========  End Wrapper  brand icon logo or  Searchbar ============ -->
+
+          <!-- ===========  Start wrapper  right side header ============ -->
+          <div class="d-flex align-item-center">
+            <!-- ===========  Start message icon ============ -->
+            <div class="align-item-space notification_status">
+              <a href="">
+                <span class="fa-regular fa-comment-dots header-icon ">
+                </span>
+              </a>
+            </div>
+            <!-- ===========  End message icon ============ -->
+
+            <!-- ===========  Start Notification icon ============ -->
+            <div class="align-item-space notification_status">
+              <a href="\">
+                <span class="fa-regular fa-bell icon header-icon"></span
+              ></a>
+            </div>
+            <!-- ===========  End Notification icon ============ -->
+
+            <!-- ===========  Start profile image  ============ -->
+            <div class="profile-image">
+              <a href=""
+                ><img src="assets/images/images.jpg" alt="profile-image"
+              /></a>
+            </div>
+            <div class="align-item-space">
+              <a href="http://"
+                ><span class="fa-solid fa-caret-down icon icon-hover"></span
+              ></a>
+            </div>
+            <!-- ===========  end profile image  ============ -->
+          </div>
+          <!-- ===========  End  wrapper right side header ============ -->
+        </div>
+        <!-- ===========  end Wrapper brand icon logo or  Searchbar or ============ -->
+      </header>
+      <!-- =========== End header ============ -->
+
+      <!-- Aside start -->
+      <div class="d-flex flex-grow-1 h-100 overflow-hidden overlap h-100">
+        <input type="checkbox" id="toggleSideBar" />
+        <aside class="aside-box">
+          <div class="d-flex flex-column justify-content-between h-100">
+            <ul class="nav-list">
+              <li>
+                <a href="" class="nav-link d-link">
+                  <span
+                    class="fa-solid fa-table-columns icon-aside icon-hover"
+                  ></span>
+                  <span class="nav-text">Search </span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="nav-link d-link">
+                  <span
+                    class="fa-solid fa-cart-shopping icon-aside icon-hover"
+                  ></span>
+                  <span class="nav-text">Shopping</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="nav-link d-link">
+                  <span
+                    class="fa-solid fa-envelope-open icon-aside icon-hover"
+                  ></span>
+                  <span class="nav-text">message</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="" class="nav-link d-link">
+                  <span class="fa-solid fa-gear icon-aside icon-hover"></span>
+                  <span class="nav-text"> Setting</span>
+                </a>
+              </li>
+            </ul>
+            <ul class="nav-list">
+              <li>
+                <a href="" class="nav-link d-link">
+                  <span
+                    class="fa-solid fa-circle-exclamation icon-aside icon-hover"
+                  ></span>
+                  <span class="nav-text">Alert</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="nav-link d-link">
+                  <span class="fa fa-sign-out icon-aside icon-hover"></span>
+                  <span class="nav-text">Logout</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+        <!-- Aside start -->
+        <!-- Start : Main Content -->
+        <section id="main-heading" class="flex-grow-1 overflow-auto     ">
+          <h1>Dashboard</h1>
+          <div class="row d-flex">
+            <!-- card wrapper -->
+            <div class="card-wrapper">
+              <!-- card -->
+              <div class="card c-pointer">
+                <div class="icon-wrapper">
+                  <span class="fa-regular fa-eye card-icon"></span>
+                </div>
+                <h4>Total Views</h4>
+                <h2>308.402</h2>
+                <p><small>Start from 1 jan 2021</small></p>
+              </div>
+            </div>
+            <!-- card wrapper -->
+            <div class="card-wrapper">
+              <!-- card -->
+              <div class="card c-pointer">
+                <div class="icon-wrapper">
+                  <span class="fas fa-regular fa-bag-shopping card-icon"></span>
+                </div>
+                <h4>Total Views</h4>
+                <h2>308.402</h2>
+                <p><small>Start from 1 jan 2021</small></p>
+              </div>
+            </div>
+            <!-- card wrapper -->
+            <div class="card-wrapper">
+              <!-- card -->
+              <div class="card c-pointer">
+                <div class="icon-wrapper">
+                  <span class="fas fa-regular fa-people-group card-icon"></span>
+                </div>
+                <h4>Total Views</h4>
+                <h2>308.402</h2>
+                <p><small>Start from 1 jan 2021</small></p>
+              </div>
+            </div>
+            <!-- card wrapper -->
+            <div class="card-wrapper">
+              <!-- card -->
+              <div class="card c-pointer">
+                <div class="icon-wrapper">
+                  <span class="fas fa-regular fa-cart-shopping card-icon"></span>
+                </div>
+                <h4>Total Views</h4>
+                <h2>308.402</h2>
+                <p><small>Start from 1 jan 2021</small></p>
+              </div>
+            </div>
+            <!-- card wrapper -->
+          </div>
+          <!-- table wrapper -->
+        <div class="main-table-wrapper d-flex">
+            <!--  table wrapper -->
+          <div class="table-wrapper">
+            <!-- table start -->
+            <table>
+              <tr>
+                <th>No</th>
+                <th>Product Name</th>
+                <th>Status</th>
+                <th>Sold</th>
+                <th>Views</th>
+              </tr>
+              <tr class="bg-color-primary">
+                <td>1</td>
+                <td><div class="d-flex align-item-center">
+                       <img src="assets/images/images.jpg" class="table-image" >
+                       <span>New Mobile app Ui kit..</span>
+                </div></td>
+               
+                <td>Active</td>
+                <td>Smith</td>
+                <td>50</td>
+              </tr>
+              <tr class="bg-color-primary">
+                <td>2</td>
+                <td><div class="d-flex align-item-center">
+                  <img src="assets/images/images.jpg" class="table-image" >
+                  <span>New Mobile app Ui kit..</span>
+           </div></td>
+          
+                <td>Active</td>
+                <td>Jackson</td>
+                <td>94</td>
+             
+              <tr class="bg-color-primary">
+                <td>3</td>
+                <td><div class="d-flex align-item-center">
+                  <img src="assets/images/images.jpg" class="table-image" >
+                  <span>New Mobile app Ui kit..</span>
+           </div></td>
+          
+                <td>Active</td>
+                <td>Johnson</td>
+                <td>67</td>
+              </tr>
+            </table>
+          </div>
+
+        </div>
+        </section>
+        <!-- End : Main Content -->
+      </div>
+      <!-- aside start -->
+    </div>
+  </body>
+</html>
