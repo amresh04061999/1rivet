@@ -236,8 +236,10 @@ img{
 }
 
 /* =============================== start main css ==========================================*/
+
+/* =============================== start table css ==========================================*/
 .table-wrapper{
-   width: 50%;
+   width: 100%;
    background-color: white;
    padding:20px;
    margin-top: 35px;  
@@ -270,7 +272,10 @@ table {
    margin-right: 50px;
    
  }
-
+.side-table-image{
+   width: 50%;
+   height: auto;
+}
 
 /*
 ============================== start media Query==========================================*/
