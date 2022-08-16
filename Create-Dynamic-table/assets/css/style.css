@@ -1,0 +1,178 @@
+/*  universal css */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+/* ===================================== helper css ===================================*/
+
+.d-flex{
+    display: flex;
+    justify-content: center;
+
+}
+.justify-content-center{
+    justify-content: center;
+}
+.align-item-center{
+    align-items: center;
+}
+
+
+
+/* ================================ table */
+.main-wrapper{
+    width: 100%;
+    height: 100vh;
+    background-color: black;  
+}
+
+.table-wrapper{
+    width:100%;
+    height: 100vh;
+    background-color: rgb(229, 236, 236);   
+}
+.table-wrapper h1{
+   text-align: center;
+    font-size: 90px;
+    margin:20px 0px ;
+}
+/* search box */
+.input-div form input {
+   padding: 20px 400px 15px 10px;
+   border-radius: 20px;
+   outline: none;
+   border: 3px solid rgb(100, 74, 74);
+ 
+}
+.input-div form  {
+    position: relative;
+    margin: 40px;
+}
+
+
+.input-div form button{
+    display: inline-block;
+    outline: none;
+    border: none;;
+    padding: 12px 26px ;
+    background-color: black;
+    box-shadow: 0px 0px 5px #000; 
+    color: white;
+    font-size: 21px;
+    border-radius: 20px;
+    position: absolute;
+    right:5px;
+    top: 12px;
+    cursor: pointer;
+  
+}
+
+
+.btn-red {
+    color: red;
+}
+.input-div form button:hover{
+    background-color: rgb(65, 61, 61);
+
+}
+  
+  .add-button {
+    font-size: 20px;
+    padding: 10px 30px;
+    outline: none;
+    background-color: black;
+    color: white;
+   margin-right: 600px;
+   
+  }
+
+  .add-button:hover{
+    background-color: red;
+   
+  }
+/*  main table  */
+  #myTable {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #myTable td, #myTable th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    font-size: 20PX;
+    padding: 10px 150px;
+  }
+  
+  #myTable tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #myTable tr:hover {background-color: #ddd;}
+  
+  #myTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+/* popup */
+  .popup{
+    width: 50%;
+    height: 30%;
+    background-color: white;
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+  }
+  .none{
+   display: none;
+   }
+
+   .button-close{
+    padding: 10px ;
+    margin: 0px 0px 240px   690px;
+   }
+
+/* popup inside */
+
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+   input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  input[type=submit] {
+    width: 100%;
+    background-color: #004b7c;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=submit]:hover {
+    background-color: #066406;
+  }
+  

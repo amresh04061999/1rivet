@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div class="main-wrapper d-flex justify-content-center align-item-center">
+    <div class="table-wrapper ">
+      <h1> DYNAMIC <span class="btn-red">TABLE</span></h1>
+      <div class="input-div d-flex justify-content-center align-item-center">
+        <button type="button" class="add-button" name="add-button-text"> add</button>
+
+        <form> <input type="text" name="search" id="myInput" onkeyup="myFunction()">
+          <button type="button">SEARCH</button>
+        </form>
+      </div>
+
+      <div class="contain-table d-flex justify-content-center align-item-center">
+
+        <div style="overflow-x:auto;">
+          <table id="myTable">
+            <thead>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Age</th>
+              <th>Gender</th>
+            </thead>
+            <tbody class="table-body">
+              <tr>
+
+            </tbody>
+
+          </table>
+          <div class="no-record-found" style="color: red; font-size: 30px; text-align: center; display: none;">No-Record-Found</div>
+        </div>
+
+      </div>
+      <div class="popup none  ">
+        <form>
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+          </select>
+          <input type="submit" value="Submit">
+          <input type="submit" class="delete-button button-close" value="Exit">
+
+        </form>
+
+      </div>
+
+
+    </div>
+
+    <script src="assets/javascript/javascript.js"></script>
+</body>
+
+</html>
