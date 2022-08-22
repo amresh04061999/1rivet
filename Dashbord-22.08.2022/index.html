@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- IMPORT FONT -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- IMPORT CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>DASHBORD</title>
+</head>
+
+<body>
+
+    <!-- main-container -->
+    <div class="container">
+        <!-- topBar header -->
+        <div class="topBar">
+            <div class="toggle d-flex">
+                &nbsp; <span class="main-title">TallyScan</span>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                &nbsp; &nbsp; <label for="toggleSideBar"><i class=" fas fa-solid fa-bars"></i></label>
+                &nbsp; &nbsp;<h1>Dashboard</h1>
+            </div>
+            <div class="right-wrapper">
+                <div class="notification">
+                    <i class="fa-regular fa-bell"></i>
+                </div>
+                <!-- ===================user section ====================-->
+                <div class="user">
+                    <img src="assets/images/14199680-portrait-of-a-small-boy-standing-and-smiling-to-you-.webp" alt="">
+                </div>
+                <div class="name-profile">
+                    <h4>John Smith</h4>
+                </div>
+                <div class="dop-con">
+                    <i class="fas fa-regular fa-angle-down"></i>
+                </div>
+            </div>
+        </div>
+        <!--================= aside section  ===========================-->
+        <!-- section -->
+
+        <!-- <input type="checkbox" id="toggleSideBar" /> -->
+        <div class=" overflow-hidden">
+        <div class="navigation">
+
+            <ul>
+                <h4>GENERAL</h4>
+                <li>
+                    <a href="#"><span class="icon"><i class="fas fa-regular fa-magnifying-glass"></i></span>
+                        <span class="title">Search</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><span class="icon"><i class="fas fa-regular fa-bell"></i></span>
+                        <span class="title">Alerts</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><span class="icon"><i class="fas fa-regular fa-tag"></i></span>
+                        <span class="title">Tags</span>
+                    </a>
+                </li>
+                <h4>OTHERS</h4>
+                <li>
+                    <a href="#"><span class="icon"><i class="fas fa-regular fa-gear"></i></span>
+                        <span class="title">Setting</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><span class="icon"><i class="fa-regular fa-trash-can"></i></span>
+                        <span class="title">Tips</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><span class="icon"><i class="fa-regular fa-trash-can"></i></span>
+                        <span class="title">Trash</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><span class="icon"><i class="fas fa-regular fa-right-from-bracket"></i></span>
+                        <span class="title">Logout</span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+        <!-- main containt section -->
+        <div class="main overflow-hidden">
+            <!-- cards -->
+            <div class="row">
+                <div class="card-wraper">
+                    <!-- start card  -->
+                    <div class="card">
+                        <div class="card-detaile">
+                            <h3>Scans</h3>
+                            <h4>350</h4>
+                        </div>
+                        <div class="cardicon">
+                            <i class="fas fa-regular fa-cart-shopping"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-wraper">
+                    <!-- start card  -->
+                    <div class="card">
+                        <div class="card-detaile">
+                            <h3>Scans</h3>
+                            <h4>350</h4>
+                        </div>
+                        <div class="cardicon">
+                            <i class="fas fa-regular fa-cart-shopping"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-wraper">
+                    <!-- start card  -->
+                    <div class="card">
+                        <div class="card-detaile">
+                            <h3>Scans</h3>
+                            <h4>350</h4>
+                        </div>
+                        <div class="cardicon">
+                            <i class="fas fa-regular fa-cart-shopping"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-wraper">
+                    <!-- start card  -->
+                    <div class="card">
+                        <div class="card-detaile">
+                            <h3>Scans</h3>
+                            <h4>350</h4>
+                        </div>
+                        <div class="cardicon">
+                            <i class="fas fa-regular fa-cart-shopping"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- search box -->
+            <div class="search">
+                <input type="text" placeholder="Search...." id="myInput" onkeyup="myFunction()">
+                <button type="button">Filter</button>
+            </div>
+            <h5>Recent Activity</h5>
+            <!-- main table -->
+            <div  class="table-peding scroll">
+                <table id="myTable">
+                    <thead>
+                        <th>Item</th>
+                        <th>Date</th>
+                        <th>Type</th>
+                        <th>Est.Cost</th>
+                        <th>Last</th>
+                        <th>List</th>
+                        <th>Auto</th>
+                        <th>Buy Now</th>
+                    </thead>
+                    <tbody class="table-body">
+                    </tbody>
+                </table>
+                <div class="none-record none" style="color: red; font-size: 20px; text-align: center;">No-Record-Found
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+    </div>
+
+
+        <script src="assets/js/javascript.js"></script>
+</body>
+
+</html>
