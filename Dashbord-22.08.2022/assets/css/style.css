@@ -9,9 +9,7 @@ html,body{
     height: 100%;
     overflow: au;
 }
-body{
-   overflow: auto;
-}
+
 
 .overflow-hidden{
     overflow: hidden;
@@ -28,12 +26,19 @@ body{
     --balck1:#222;
     --black2:#999;
 }
+
 /*=========================================================================== helper================================================================== */
 
 /* topbar */
 
+.container{
+    width: 100%;
+    height: 100vh;
+}
 .topBar{
-    
+    position: sticky;
+    top: 0;
+    z-index: 5555;
     width: 100%;
     height: 50px;
     display: flex;
@@ -42,6 +47,8 @@ body{
     padding: 40px 30px;
     background-color: var(--white);
     border-bottom: 1px solid var(--black2);
+    
+    ;
     
 }
 .toggle{
@@ -54,7 +61,6 @@ body{
 }
 .toggle h1{
     font-size: 35px;
-   
 }
 
 .right-wrapper{
@@ -76,9 +82,11 @@ body{
     background-color: transparent;
     align-items: center;
 }
+
 .user img{
     width: 100%;
 }
+
 .name-profile{
     padding-left: 10px;
 }
@@ -99,11 +107,10 @@ body{
 /* navigation */
 .navigation{
     position: fixed;
-    
     width: 300px;
     height: 100%;
     background-color: var(--white);
-    overflow: hidden;
+    /* overflow: hidden; */
     transform: translateX(0); 
     transition: .5s ease-in-out;
     border-right: 1px solid var(--black2);
@@ -116,8 +123,8 @@ body{
     margin-bottom: 10px; 
 }
 .navigation ul li a{
-   position: relative;
-   display: block;
+   /* position: relative; */
+   /* display: block; */
    width: 100%;
    display: flex;
    text-decoration: none;
@@ -157,20 +164,18 @@ body{
     left: 300px;
     min-height: 100vh;
     background:var(--white);
-    transition: 0.5s;
+    transition: 0.2s;
 }
 
 
 
 /* card section */
-.main.active{
-    width:100%;
+.active{
+    width: 100%;
     left: 0;
 }
 
-.main{
-    background:hsl(0deg 0% 98%);
-}
+
 .row{
     flex-wrap: wrap;
     display: flex;
@@ -240,31 +245,33 @@ body{
     padding: 28px;
     font-size: 45px;
 }
+
 /* table */
 .table-peding{
     margin: 0px 40px;
 }
 
+.scroll{
+    height: 500px;
+    overflow-y: scroll;
+}
 
 #myTable {
     width: 100%;
-   
-    border-spacing:0px 10px ;
-    
+    border-spacing:0px 10px ; 
   }
   
   #myTable td    {
     padding: 25px;
     text-align: center;
-    background-color: var(--white);
-   
+    background-color: var(--white); 
   }
-  #myTable tr:nth-child(even){background-color: #f2f2f2;
-}
   
-  #myTable tr:hover {background-color: #ddd;}
-  
-  #myTable th {
+ 
+
+  #myTable thead th {
+    position: sticky;
+    top: 0;
     padding: 30px 0px;
     padding-bottom: 12px;
     text-align: center;
@@ -273,8 +280,27 @@ body{
     
   }
   
-/* media Query */
 
+  .badge{
+    background-color: rgb(235, 222, 222);
+    border-radius: 4px;
+    padding: 5px;
+  }
+
+  .badge-danger{
+    background-color: rgb(248, 212, 212);
+    color: red;
+  }
+
+  .badge-success{
+    background-color: rgb(248, 212, 212);
+    color: gree;
+  }
+
+
+
+
+/* media Query */
 @media (max-width: 1200px) {
    
     .card-wraper{
@@ -302,6 +328,8 @@ body{
    
    }
 
+
+
    @media (max-width:900px) {
     .search input{
         width: 50%;
@@ -328,8 +356,8 @@ body{
     }
     }
     @media (max-width:600px) 
+
     {
-      
         .topBar{
             z-index: 3000;
         }
@@ -342,6 +370,7 @@ body{
 
 
     @media (max-width:480px) 
+
     {
         .search label input{
             width: 90%;
@@ -350,19 +379,23 @@ body{
         .card-wraper{
             align-items: center;
         }
-            
+           
+        
     .navigation{
         width: 100%;
         left: -100%;
         z-index: 1000;
     }
+
     .navigation.active{
         width: 100%;
         left: 0;
     }
+
      .toggle{
         z-index: 10001;
      }
+
 
      .main.active .toggle{
         position: fixed;

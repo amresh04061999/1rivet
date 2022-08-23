@@ -7,6 +7,7 @@
   toggle.onclick=function(){
       navigation.classList.toggle("active");
       main.classList.toggle("active");
+    
   }
 // api manual
   const buydata =[
@@ -43,7 +44,7 @@
     {
         Item:"Skippy peanut butter 160z",
         Date:"07.nov,8:35 pm",
-        Type:"discarded",
+        Type:"want",
         EstCost:"$40.25",
         Last:"agust",
         List:"Gerocry",
@@ -63,7 +64,7 @@
     {
         Item:"Skippy peanut butter 160z",
         Date:"07.nov,8:35 pm",
-        Type:"discarded",
+        Type:"want",
         EstCost:"$40.25",
         Last:"agust",
         List:"Gerocry",
@@ -81,12 +82,33 @@
             for (const item in user) {
                 const tblColumn = document.createElement('td');
                 const value = user[item];
-                tblColumn.textContent = value;
+
+                if(item=="Type"){
+                  const span=document.createElement("span");
+                  span.classList.add('badge');
+                  span.textContent= user[item];
+
+                  if( user[item] == "discarded"){
+
+                    span.classList.add('badge-danger');
+                  }
+                  if(user[item]=="want")
+                  {
+                      span.classList.add('badge-success');
+                  }
+                  tblColumn.appendChild(span)
+                }
+                else{
+                  tblColumn.textContent = value;
+                }
+                
                 tblRow.appendChild(tblColumn);
             }
             tblBody.appendChild(tblRow);
         });
     }
+
+
 
 
     // filte
