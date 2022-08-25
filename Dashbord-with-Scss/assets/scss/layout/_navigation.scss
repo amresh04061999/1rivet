@@ -1,0 +1,90 @@
+/* navigation */
+.navigation {
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background-color: var(--blue);
+    border-left: 5px solid var(--blue);
+    overflow: hidden;
+    transition: 0.5s;
+
+    &.active {
+        width: 90px;
+    }
+
+    ul li {
+        position: relative;
+        width: 100%;
+        list-style: none;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+
+        &:hover.hovered {
+            background-color: var(--white);
+        }
+
+        &:nth-child(1) {
+            margin-bottom: 40px;
+            pointer-events: none;
+        }
+
+        & a {
+            position: relative;
+            display: block;
+            width: 100%;
+            display: flex;
+            text-decoration: none;
+            color: var(--white);
+        }
+
+        &:hover.hovered a {
+            color: var(--blue);
+        }
+
+        .icon {
+            position: relative;
+            display: block;
+            min-width: 90px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            font-size: 25px;
+        }
+
+        .title {
+            position: relative;
+            display: block;
+            padding: 0px 10px;
+            height: 60px;
+            line-height: 60px;
+            text-align: start;
+        }
+
+        &:hover a::before,
+        .hovered a::before {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: -50px;
+            width: 50px;
+            height: 50px;
+            background: transparent;
+            border-radius: 50%;
+            box-shadow: 35px 35px 0 10px var(--white);
+            pointer-events: none;
+        }
+
+        &:hover a::after,
+        .hovered a::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: -50px;
+            width: 50px;
+            height: 50px;
+            background: transparent;
+            border-radius: 50%;
+            box-shadow: 35px -35px 0 10px var(--white);
+        }
+    }
+}

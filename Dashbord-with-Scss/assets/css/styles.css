@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Poppins:wght@100;200;300;400;500&display=swap");
+:root {
+  --blue:#287bff;
+  --white:white;
+  --grey:#f5f5f5;
+  --balck1:#222;
+  --black2:#999;
+}
+
+/* universla css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.main {
+  position: absolute;
+  width: calc(100% - 300px);
+  left: 300px;
+  min-height: 100vh;
+  background: var(--grey);
+  transition: 0.5s;
+}
+.main.active {
+  width: calc(100% - 300px);
+  left: 90px;
+}
+.main h1 {
+  padding: 20px;
+}
+.main .row {
+  flex-wrap: wrap;
+  display: flex;
+  margin: 0 -10px;
+}
+.main .row .card-wraper {
+  width: 25%;
+  padding: 0 15px;
+}
+.main .row .card-wraper .card {
+  height: 130px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--white);
+  margin: 9px;
+  box-shadow: 3px 3px 3px 4px var(--black2);
+  transition: 0.22s;
+  border-radius: 10px;
+}
+.main .row .card-wraper .card:hover {
+  background: var(--blue);
+}
+.main .row .card-wraper .card h3 {
+  font-size: 32px;
+  color: var(--blue);
+  padding-bottom: 5px;
+}
+.main .row .card-wraper .card h4 {
+  font-size: 16px;
+}
+.main .row .card-wraper .card i {
+  font-size: 29px;
+}
+.main .row .card-wraper .card:hover .card-detaile h3,
+.main .row .card-wraper .card .card-detaile h4,
+.main .row .card-wraper .card .cardicon i {
+  color: var(--white);
+}
+
+.topBar {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 30px;
+  background-color: var(--grey);
+  box-shadow: 0 1px 1px 1px var(--black2);
+  margin-top: 50;
+}
+.topBar .toggle {
+  position: relative;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.topBar .search {
+  position: relative;
+  width: 400px;
+}
+.topBar .search label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.topBar .search label input {
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
+  outline: none;
+  padding-right: 60px;
+  padding: 5px 20px;
+  border: 2px solid var(--black2);
+}
+.topBar .search label i {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 1.5rem;
+}
+.topBar .right-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.topBar .right-wrapper .notification i {
+  font-size: 25px;
+}
+.topBar .right-wrapper .user {
+  margin-left: 40px;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: red;
+  align-items: center;
+}
+.topBar .right-wrapper .user img {
+  width: 100%;
+}
+
+/* navigation */
+.navigation {
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  background-color: var(--blue);
+  border-left: 5px solid var(--blue);
+  overflow: hidden;
+  transition: 0.5s;
+}
+.navigation.active {
+  width: 90px;
+}
+.navigation ul li {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+.navigation ul li:hover.hovered {
+  background-color: var(--white);
+}
+.navigation ul li:nth-child(1) {
+  margin-bottom: 40px;
+  pointer-events: none;
+}
+.navigation ul li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: var(--white);
+}
+.navigation ul li:hover.hovered a {
+  color: var(--blue);
+}
+.navigation ul li .icon {
+  position: relative;
+  display: block;
+  min-width: 90px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 25px;
+}
+.navigation ul li .title {
+  position: relative;
+  display: block;
+  padding: 0px 10px;
+  height: 60px;
+  line-height: 60px;
+  text-align: start;
+}
+.navigation ul li:hover a::before,
+.navigation ul li .hovered a::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -50px;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: 35px 35px 0 10px var(--white);
+  pointer-events: none;
+}
+.navigation ul li:hover a::after,
+.navigation ul li .hovered a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: 35px -35px 0 10px var(--white);
+}
+
+/*# sourceMappingURL=styles.css.map */
