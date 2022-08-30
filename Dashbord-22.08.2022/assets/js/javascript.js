@@ -22,7 +22,7 @@
         BuyNow:"n/a"
     },
     {
-        Item:"Skippy peanut butter 160z",
+        Item:"amresh peanut butter 160z",
         Date:"07.nov,8:35 pm",
         Type:"discarded",
         EstCost:"$40.25",
