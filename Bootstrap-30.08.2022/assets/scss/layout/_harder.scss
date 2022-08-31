@@ -1,0 +1,46 @@
+
+.search-wraper{
+    width: 100%;
+    position: relative;
+}
+input[type=text] {
+    width: 100%;
+    padding: 15px 60px;
+    border-radius: $border-radius;
+    background-color:$aside-bg;
+    color: white;
+    outline: none;
+    border: none;
+ 
+   }
+   
+ 
+  
+//    .search-icon {
+//      position: absolute;
+//      top: 16px;
+//      left: 24px;
+   
+//    }
+//    .filter-icon{
+//      position: absolute;
+//      top: 16px;
+//      left: 700px;
+//    }
+
+   .rounded-circle1{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border-color: antiquewhite;
+    background-color: $aside-bg;
+    margin-left: 15px;
+   }
+   
+
+  .icon{
+    font-size: 20px;
+  }
+
+
+      

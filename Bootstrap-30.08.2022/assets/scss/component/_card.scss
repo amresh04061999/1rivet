@@ -1,14 +1,44 @@
 .card{
-    width: 250px;
-    height: 250px;
+    flex: 0 0 200px;
+    max-width: 250px;
+   
    background-color:$card-color;
    border-radius: $border-radius;
 }
-img{
+.image{
     width: 50px;
+    margin-top: -16px;
+    transform: rotate(-15deg);
+  // justify-content-space-between;
 }
 
-button{
-  padding: 10px 80px;
 
+.icon-wraper{
+  width: 50px;
+  height: 50px;
+  background-color:#41a3ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+// card  discount
+.card--dis{
+  width: 100%;
+  // background-color;
+  border-radius: $border-radius;
+}
+
+.card-right{
+  width: 100%;
+  background-color: #292b3c;
+  border-radius: $border-radius;
+}
+
+.cards{
+  width: 200px;
+  border-radius: $border-radius;
+  border: 1px solid #2e3041;
+  
 }
