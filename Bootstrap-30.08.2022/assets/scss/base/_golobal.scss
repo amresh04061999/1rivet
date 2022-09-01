@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
 *{
     list-style: none;
     margin: 0;
@@ -10,12 +13,14 @@ html,body{
     height: 100%;
     // list-style: none;
 }
-
+body{
+    overflow: hidden;
+    font-family:'Poppins', sans-serif;
+}
 
 .body-bg{
     background-color: $body-bg;
 }
-
 .aside{
     flex: 0 0 250px;
     max-width: 250;
