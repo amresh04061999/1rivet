@@ -7773,10 +7773,11 @@ textarea.form-control-lg {
   border-radius: 8px;
 }
 
-.header {
-  width: 100%;
+@media (max-width: 878px) {
+  .nav {
+    display: none;
+  }
 }
-
 .search-wraper {
   width: 100%;
   position: relative;

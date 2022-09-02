@@ -1,3 +1,4 @@
+
 .nav{
     &-item{
         &:not(:last-child){
@@ -16,6 +17,10 @@
     
 }
 
-.header{
-    width: 100%;
-}
+
+    @media (max-width:878px){
+       .nav{
+        display: none;
+
+       } 
+    }

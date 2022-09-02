@@ -1,0 +1,34 @@
+
+header{
+  box-shadow: 1px 1px 1px 3px hsl(206deg 33% 96%);
+}
+.search-wraper{
+    width: 100%;
+    position: relative;
+}
+
+input[type=text] {
+    width: 80%;
+   padding: 14px 50px;
+    border-radius: $border-radius;
+    background-color:hsl(220deg 43% 99%);
+    color: rgb(110, 109, 109);
+    border: none;
+    outline: none;
+   }
+  
+   .search-icon {
+     position: absolute;
+     top: 19px;
+     left: 24px;
+    
+   }
+   
+   .image-profile{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+   
+   }
+
+      
