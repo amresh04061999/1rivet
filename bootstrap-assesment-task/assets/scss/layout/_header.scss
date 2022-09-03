@@ -1,0 +1,29 @@
+header {
+  box-shadow: $box-shadow;
+  nav {
+    .collapse {
+      .form-expand {
+        position: relative;
+        width: 75%;
+        .form-contro {
+          padding: 10px 40px 10px 40px;
+          outline: none;
+          border: none;
+        }
+        .fa-magnifying-glass {
+          position: absolute;
+          left: 12px;
+        }
+      }
+    }
+  }
+}
+
+.image-profile {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  img {
+    width: 100%;
+  }
+}
