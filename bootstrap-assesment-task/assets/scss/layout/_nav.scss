@@ -1,16 +1,22 @@
 aside{
-    width: 250px;
+    width: 300px;
     box-shadow: $box-shadow;
+    height: 100%;
    
     .nav{
+      & > :first-child {
+        pointer-events: none;
+      }
+      
         &-item{
+          
         position: relative;
-           
+       
             &.active{
                 background-color:rgba($primary, 0.4);
                 font-weight: bold;
 
-        position: relative;
+               position: relative;
                 &::after{
                 position: absolute;
                 content: "";
@@ -26,6 +32,13 @@ aside{
             
               &:hover{
                 background-color:rgba($primary, 0.2);
+                transition: all 4s ease;
+                -webkit-transition: all 1s ease;
+                -moz-transition: all 1s ease;
+                -o-transition: all 1s ease;
+                -ms-transition: all 1s ease;
+                
+
               }
               
             }
@@ -35,6 +48,7 @@ aside{
            
            .icon-size {
             font-size: $nav-font-icon-size;
+            
           
            }
            

@@ -1,4 +1,7 @@
 main {
+    background-color: #fafbfd;
+    height: 100%;
+    overflow-y: auto;
     .row{
         .card{
             box-shadow: $box-shadow;
