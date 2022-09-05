@@ -1,7 +1,7 @@
 aside{
-    width: 300px;
+  z-index: 1;
+    width: 230px;
     box-shadow: $box-shadow;
-    height: 100%;
    
     .nav{
       & > :first-child {
