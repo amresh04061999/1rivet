@@ -1,0 +1,20 @@
+
+<div class="main-container  d-flex h-100 flex-column ">
+  <!-- header -->
+  <app-parent></app-parent>
+  <!-- end -->
+  <div class="main border border-primary d-flex h-100 ">
+    <!-- side bar -->
+
+      <div class="aside">
+        <app-aside></app-aside>
+      </div>
+      <main class="border border-primary flex-grow-1 ">
+        <router-outlet></router-outlet></main>
+    </div>
+
+  <!-- footer -->
+  <app-footer></app-footer>
+</div>
+
+
