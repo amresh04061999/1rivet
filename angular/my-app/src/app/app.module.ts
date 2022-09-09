@@ -8,6 +8,7 @@ import { AboutComponent } from './parent/about/about.component';
 import { ContactComponent } from './parent/contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { AsideComponent } from './aside/aside.component';
+import { HomechildComponent } from './parent/home/homechild/homechild.component';
 
 
 
@@ -23,6 +24,7 @@ import { AsideComponent } from './aside/aside.component';
     ContactComponent,
     FooterComponent,
     AsideComponent,
+    HomechildComponent,
   ],
   imports: [
     BrowserModule,

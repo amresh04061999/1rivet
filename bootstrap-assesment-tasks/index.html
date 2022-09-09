@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ============== font import ====================-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--================ css import ====================-->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <title>Dashboard</title>
+</head>
+
+<body>
+  <!--======================== main containner====================================== -->
+  <!-- <div class=" container-fluid d-flex h-100"> -->
+    <div class=" d-flex h-100">
+    <!--=========================== left navigation ===================================-->
+    
+    <aside class="d-flex flex-column h-100 shadow">
+      <div class="py-4 logo-header"> 
+          <div class=" d-flex align-items-center justify-content-center " >
+            <span class="fa-2x my-3  fa-regular fa-heart text-primary"></span>
+            <h6 class="text-secondary px-2 pt-1 d-none d-lg-block d-lg-block bold" >F I T T L E</h6>
+          </div>
+      </div>
+      <div class="flex-grow-1 overflow-auto">
+        <ul class="nav d-flex flex-column flex-nowrap  h-100">
+          <li class="nav-item  active ">
+            <a class="nav-link d-flex flex-column align-items-center" href="#">
+              <i class="icon-size  fas fa-light fa-gauge  my-3 text-primary"></i>
+              <h6 class="text-primary  mb-3  d-none d-lg-block">Dashboard</h6>
+            </a>
+          </li>
+          <li class="nav-item flex-nowrap ">
+            <a class="nav-link " href="#">
+              <div class="d-flex flex-column align-items-center"> 
+                 <i class=" icon-size  fas fa-regular fa-building-columns my-3"></i>
+                <h6 class=" mb-3  d-none  d-lg-block"><span class="px-1">My</span>Subscription</h6></div>
+            
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link d-flex flex-column align-items-center" href="#">
+              <i class="icon-size fas fa-regular fa-building-columns  my-3"></i>
+              <h6 class=" mb-3  d-none  d-lg-block">My Studio</h6>
+            </a>
+          </li>
+          <li class="nav-item  ">
+            <a class="nav-link d-flex flex-column align-items-center" href="#">
+              <i class="icon-size fa-solid fa-clipboard my-3"></i>
+              <h6 class="  mb-3  d-none  d-lg-block">Post A Job</h6>
+            </a>
+          </li>
+          <li class="nav-item  ">
+  
+            <a class="nav-link d-flex flex-column align-items-center" href="#">
+              <i class=" icon-size fa-solid fa-calendar  my-3"></i>
+              <h6 class="  mb-3  d-none  d-lg-block">My Event</h6>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link d-flex flex-column align-items-center" href="#">
+              <i class="icon-size fas fa-light fa-gauge my-3"></i>
+              <h6 class="   mb-3  d-none   d-lg-block">Notification</h6>
+            </a>
+          </li>
+          <li class="nav-item  ">
+            <a class="nav-link  d-flex flex-column align-items-center" href="#">
+              <i class=" icon-size fas fa-light fa-gauge  my-3"></i>
+              <h6 class=" mb-3  d-none  d-lg-block">Settings</h6>
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+    </aside>
+    <!-- =========================== top or main section  ===================================== -->
+    <section class="d-flex flex-column flex-grow-1">
+   
+          
+        <nav class="navbar navbar-expand-lg shadow">
+          <button class="navbar-toggler my-2  ms-3" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+            <form class="form-expand d-flex  align-items-center my-4 ms-3" >
+              <input class="form-contro  text-secondary" id="search" placeholder="Search"
+                >
+                <label for="search"> <span class=" fas fa-light fa-magnifying-glass text-secondary"></span></label>
+             
+            </form>
+            <ul class="navbar-nav d-flex align-items-center y= flex-lg-row  flex-sm-row   mb-2 mb-lg-0">
+              <li class="nav-item ms-3">
+                <a class="" href="#">
+                  <span class="fa-regular font-size-totification fa-bell text-secondary position-relative">
+                    <span
+                      class="position-absolute top-0 start-20  translate-middle badge border border-light rounded-circle bg-danger p-1"><span
+                        class="visually-hidden">unread messages</span></span>
+                    </button>
+                  </span>
+                </a>
+              </li>
+               <li class="nav-item me-4 d-flex justify-content-center align-items-center ">
+                <div class="mx-4">
+                  <h6 class="text-secondary">Ryan Gosling</h6>
+                </div>
+                  <div class="rounded-circle image-profile  overflow-hidden  ">
+                  <img src="assets/images/photo-1577975882846-431adc8c2009.jpg " width="100%">
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      
+
+ 
+     <div class="main p-4 flex-grow-1">
+      <div class="row g-4 overflow-auto p-3">
+        <!-- dashbord-details -->
+        <div class="col-12">
+          <h5>Dashboard</h5>
+          <h6 class="text-secondary">Hello , Ryan! check Out What's happening today!</h6>
+        </div>
+        <!-- ================================= first card =================================== -->
+        <div class="col-12 card shadow">
+          <div class="d-flex align-items-center justify-content-between  p-3">
+            <div class="d-flex align-items-center">
+              <span class="fa-2x fa-solid fa-circle-exclamation text-secondary"> </span>
+              <h6 class="text-secondary px-3">Thanks for joining ypc! Go Ahead and</h6>
+              <button type="button" class="btn btn-primary text-white rounded-pill box-shadow text-nowrap me-3">Create Now</button>
+            </div>
+            <div>
+              <i class="fa-solid fa-xmark text-secondary fa-2x"></i>
+            </div>
+          </div>
+        </div>
+
+        <!--======================== second caard =============================-->
+        <div class="col-12 card  shadow">
+          <div class="d-flex align-items-center justify-content-between  p-3">
+            <div class="d-flex align-items-center">
+              <span class="fa-2x fa-solid fa-circle-exclamation text-secondary"> </span>
+              <h6 class="text-secondary px-3">You have <b class="text-black">2</b> Unread notification</h6>
+              <button type="button" class="btn btn-success text-primary rounded-pill text-nowrap me-3">Check Now</button>
+            </div>
+            <div>
+              <i class="fa-solid fa-xmark text-secondary fa-2x"></i>
+            </div>
+          </div>
+        </div>
+        <!-- table section -->
+
+        <!-- first section  table-->
+        <div class="col-12 col-lg-6  ">
+          
+          <!-- card table -->
+          <div class="table-body  overflow-auto mt-2 ">
+            <table class="table  ">
+              <thead class="card shadow">
+                <tr>
+                  <th class="position-sticky top-0 bg-white ">
+                    <div class="d-flex  justify-content-between p-2">
+                      <div class="card-header ">
+                        <h5>New Brisbane instructors+02</h5>
+                      </div>
+                      <div class="d-flex align-items-center p-1 flex-nowrap">
+                        <i class="fa-solid fa-eye text-secondary pe-1"></i>
+                        <div class=""> 
+                           <span class="text-secondary  flex-nowrap">View All</span>
+                          <span class="fa-solid fa-caret-right text-secondary"></span>
+                        </div>
+                      
+                      </div>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="bg-white">
+                <tr>
+                  <td>
+                    <div class=" content d-flex justify-content-between align-items-center p-3">
+                      <div>
+                        <h5> Thomas Budiman</h5>
+                        <span class="text-secondary">24 Hours Fitness <span>|
+                            <span>1050 Brown Street Brisban</span></span></span>
+                        <div class="pt-2"> <button type="button" class="btn  rounded-pill text-white btn-primary box-shadow">Part
+                            Time</button>
+                          <button type="button" class="btn btn-success text-primary rounded-pill icon-color-btn">Aerial</button>
+                          <button type="button" class="btn  btn-success text-primary rounded-pill">yoga</button>
+                        </div>
+                      </div>
+                      <h6 class="text-secondary">5 min</h6>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex justify-content-between align-items-center p-3">
+                      <div>
+                        <h5> Thomas Budiman</h5>
+                        <span class="text-secondary">24 Hours Fitness <span>|
+                            <span>1050 Brown Street Brisban</span></span></span>
+                        <div class="pt-2"> <button type="button" class="btn  rounded-pill text-primary btn-success">part
+                            Time</button>
+                          <button type="button" class="btn btn-success text-primary rounded-pill icon-color-btn">Aerial</button>
+                          <button type="button" class="btn btn-success text-primary  rounded-pill">yoga</button>
+                        </div>
+                      </div>
+                      <h6 class="text-secondary">5 min</h6>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex justify-content-between align-items-center p-3">
+                      <div>
+                        <h5> Thomas Budiman</h5>
+                        <span class="text-secondary">24 Hours Fitness <span>|
+                            <span>1050 Brown Street Brisban</span></span></span>
+                        <div class="pt-2"> <button type="button" class=" btn text-primary rounded-pill btn-success">part
+                            Time</button>
+                          <button type="button" class="btn btn-success text-primary rounded-pill icon-color-btn">Aerial</button>
+                      
+                          <button type="button" class="btn  btn-success text-primary rounded-pill">yoga</button>
+                        </div>
+                      </div>
+                      <h6 class="text-secondary">5 min</h6>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex justify-content-between align-items-center p-3">
+                      <div>
+                        <h5> Thomas Budiman</h5>
+                        <span class="text-secondary">24 Hours Fitness <span>|
+                            <span>1050 Brown Street Brisban</span></span></span>
+                        <div class="pt-2"> <button type="button" class="btn  text-primary rounded-pill btn-success">part
+                            Time</button>
+                          <button type="button" class="btn btn-success text-primary rounded-pill icon-color-btn">Aerial</button>
+                          <button type="button" class="btn  btn-success text-primary  rounded-pill">yoga</button>
+                        </div>
+                      </div>
+                      <h6 class="text-secondary">5 min</h6>
+                    </div>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+          <!-- close table -->
+        </div>
+
+        <!-- second section  table-->
+        <div class="col-12 col-lg-6  ">
+          <!-- card table -->
+          <div class="table-body overflow-auto mt-2">
+            <table class="table  ">
+              <thead class="card">
+                <tr>
+                  <th class="position-sticky top-0 bg-white" >
+                    <div class="header d-flex header justify-content-between p-2" >
+                      <div class="card-header ">
+                        <h5>New Brisbane instructors+02</h5>
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-eye text-secondary"></i>
+                        <span class="text-secondary">View All</span>
+                        <span class="fa-solid fa-caret-right text-secondary"></span>
+                      </div>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="bg-white">
+                <tr>
+                  <td>
+                    <div class="d-flex justify-content-between align-items-center p-3">
+                      <div>
+                        <h5> Thomas Budiman</h5>
+                        <span class="text-secondary">24 Hours Fitness <span>|
+                            <span>1050 Brown Street Brisban</span></span></span>
+                        
+                      </div>
+                      <h6 class="text-secondary">5 min</h6>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex justify-content-between align-items-center p-3">
+                      <div>
+                        <h5> Thomas Budiman</h5>
+                        <span class="text-secondary">24 Hours Fitness <span>|
+                            <span>1050 Brown Street Brisban</span></span></span>
+                       
+                      </div>
+                      <h6 class="text-secondary">5 min</h6>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex justify-content-between align-items-center p-3">
+                      <div>
+                        <h5> Thomas Budiman</h5>
+                        <span class="text-secondary">24 Hours Fitness <span>|
+                            <span>1050 Brown Street Brisban</span></span></span>
+                        
+                      </div>
+                      <h6 class="text-secondary">5 min</h6>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex justify-content-between align-items-center p-3">
+                      <div>
+                        <h5> Thomas Budiman</h5>
+                        <span class="text-secondary">24 Hours Fitness <span>|
+                            <span>1050 Brown Street Brisban</span></span></span>
+                        
+                      </div>
+                      <h6 class="text-secondary">5 min</h6>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex justify-content-between align-items-center p-3">
+                      <div>
+                        <h5> Thomas Budiman</h5>
+                        <span class="text-secondary">24 Hours Fitness <span>|
+                            <span>1050 Brown Street Brisban</span></span></span>
+                        
+                      </div>
+                      <h6 class="text-secondary">5 min</h6>
+                    </div>
+                  </td>
+                </tr><tr>
+                  <td>
+                    <div class="d-flex justify-content-between align-items-center p-3">
+                      <div>
+                        <h5> Thomas Budiman</h5>
+                        <span class="text-secondary">24 Hours Fitness <span>|
+                            <span>1050 Brown Street Brisban</span></span></span>
+                        
+                      </div>
+                      <h6 class="text-secondary">5 min</h6>
+                    </div>
+                  </td>
+                </tr><tr>
+                  <td>
+                    <div class="d-flex justify-content-between align-items-center p-3">
+                      <div>
+                        <h5> Thomas Budiman</h5>
+                        <span class="text-secondary">24 Hours Fitness <span>|
+                            <span>1050 Brown Street Brisban</span></span></span>
+                        
+                      </div>
+                      <h6 class="text-secondary">5 min</h6>
+                    </div>
+                  </td>
+                </tr><tr>
+                  <td>
+                    <div class="d-flex justify-content-between align-items-center p-3">
+                      <div>
+                        <h6> Thomas Budiman</h6>
+                        <span class="text-secondary">24 Hours Fitness <span>|
+                            <span>1050 Brown Street Brisban</span></span></span>
+                        
+                      </div>
+                      <h6 class="text-secondary">5 min</h6>
+                    </div>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+          <!-- close table -->
+        </div>
+
+      </div>
+    </div>
+  
+     </div>
+    </section>
+    <!--======================== main containner====================================== -->
+  </div>
+
+  <!-- !-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

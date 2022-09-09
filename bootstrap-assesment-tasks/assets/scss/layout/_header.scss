@@ -1,0 +1,32 @@
+
+  nav {
+    // z-index: 0;
+    .collapse {
+      .form-expand {
+        position: relative;
+        .form-contro {
+          padding: 10px 40px 10px 40px;
+          outline: none;
+          border: none;
+        }
+        .fa-magnifying-glass {
+          position: absolute;
+          left: 10px;
+         bottom: 15px;
+        }
+      }
+    }
+  }
+
+.image-profile {
+  width: 45px;
+  height: 45px;
+  overflow: hidden;
+  img {
+    width: 100%;
+  }
+  
+}
+.font-size-totification {
+  font-size: 20px;
+}

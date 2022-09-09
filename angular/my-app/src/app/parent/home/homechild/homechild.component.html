@@ -1,0 +1,10 @@
+<!-- add user -->
+<div class="child"><label for="item-input">Add  user:</label><br>
+  <input type="text" id="item-input" #newItem class="input">
+  <button type="button" (click)="addNewItem(newItem.value)" class="button">Add user</button>
+</div>
+
+<h1 [style.color] = "'blue'"
+[style.text-align] = "'bittom'" >
+ {{ inputFromParent }} ;
+</h1>

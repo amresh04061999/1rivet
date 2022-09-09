@@ -1,5 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Poppins:wght@300;700;800&display=swap");
 .boxshadow {
-  box-shadow: 0 0.5rem 1rem rgba(29, 165, 151, 0.3);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 * {
@@ -13,28 +14,7 @@ body {
   width: 100%;
   height: 100%;
   overflow: hidden;
-}
-
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey;
-  border-radius: 10px;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #c1c1c1;
-  border-radius: 10px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #c1c1c1;
+  font-family: "Poppins", sans-serif;
 }
 
 :root {
@@ -2011,7 +1991,7 @@ progress {
 }
 
 .shadow {
-  box-shadow: 0 0.5rem 1rem rgba(128, 128, 128, 0.25) !important;
+  box-shadow: 0 0 50px -32px #000 !important;
 }
 
 .shadow-sm {
@@ -7778,7 +7758,7 @@ main {
   overflow-y: auto;
 }
 main .row .card {
-  box-shadow: 0 0.5rem 1rem rgba(128, 128, 128, 0.25);
+  box-shadow: 0 0 50px -32px #000;
 }
 
 .table-body {
@@ -7801,19 +7781,21 @@ main .row .card {
 }
 
 aside {
-  z-index: 1;
   width: 230px;
-  box-shadow: 0 0.5rem 1rem rgba(128, 128, 128, 0.25);
 }
 aside .nav > :first-child {
   pointer-events: none;
+}
+aside .nav-link {
+  color: #a1adb6;
 }
 aside .nav-item {
   position: relative;
 }
 aside .nav-item.active {
-  background-color: rgba(29, 165, 151, 0.4);
-  font-weight: bold;
+  background-color: rgba(29, 165, 151, 0.1);
+  font-weight: 800;
+  color: #1da597;
   position: relative;
 }
 aside .nav-item.active::after {
@@ -7828,7 +7810,8 @@ aside .nav-item.active::after {
   border-top: 13px solid transparent;
 }
 aside .nav-item:hover {
-  background-color: rgba(29, 165, 151, 0.2);
+  background-color: rgba(29, 165, 151, 0.1);
+  color: #1da597;
   transition: all 4s ease;
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
@@ -7840,7 +7823,7 @@ aside .nav-link .icon-size {
 }
 
 header {
-  box-shadow: 0 0.5rem 1rem rgba(128, 128, 128, 0.25);
+  box-shadow: 0 0 50px -32px #000;
 }
 header nav .collapse .form-expand {
   position: relative;
