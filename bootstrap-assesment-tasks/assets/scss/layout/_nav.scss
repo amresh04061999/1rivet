@@ -9,9 +9,7 @@ aside {
     height: 107px;
   }
   .nav {
-    & > :first-child {
-      pointer-events: none;
-    }
+    
     &-link {
       color: $secondary;
     }

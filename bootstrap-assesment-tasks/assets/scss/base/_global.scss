@@ -42,7 +42,18 @@ html, body{
   .box-shadow{
     box-shadow: $box-shadow-button;
 }
-.shadow{
+ .shadow{
     box-shadow: $box-shadow;
-}
+ }
 
+ .font-color{
+  color: $font-color;
+ }
+
+ .icon-font-size-14{
+  font-size: 14px;
+ }
+
+ .font-size-totification {
+  font-size: 20px;
+}
