@@ -11,13 +11,12 @@
 
 <h2>Single binding</h2>
 <!-- single binding -->
-
 <div>
   <input #input (keyup)="keyup(input.value)" placeholder="Enter the value">
   <h2 style="color:red ;">{{ text }}</h2>
 </div>
 
-
+<!-- two way binding -->
 <h2> Two way binding</h2>
 <h2>Example 2</h2>
 <input type="text" #textvalue name="value" [(ngModel)]="value"><BR><BR><BR><BR>
@@ -26,9 +25,45 @@
 <button (click)="clearValue()">Clear</button>
 <button (click)="add(textvalue.value)">add</button>
 
-<ul>
-  <li *ngFor="let item of array ">
-    {{array}}
+<ul >
+  <li *ngFor="let item of newarray">
+    {{newarray}}
   </li>
 </ul>
+<!-- ngfor used -->
+<h4>*ngFor example</h4>
+<ul>
+  <li *ngFor="let movie of arraydata">
+    {{ movie.name }}
+    {{ movie.name.Avengers}}
+  </li>
+</ul>
+<h4>*ngFor example with table</h4>
+<div>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>#ID</th>
+        <th>Employee name</th>
+        <th>Employee salary</th>
+        <th>Employee age</th>
+        <th>profile  image</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of Employee">
+        <th>{{ employee.id }}</th>
+        <td>{{employee.employee_name}}</td>
+        <td>{{ employee.employee_salary }}</td>
+        <td>{{employee.employee_age}}</td>
+        <td><img src={{employee.profile_image}} style="width: 80px;"></td>
+        <td>
+          <button type="button" >Edit</button>
+          <button type="button" (click)="Delete(employee.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
