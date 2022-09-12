@@ -17,6 +17,6 @@ export class HomechildComponent implements OnInit {
   @Output() userlist= new EventEmitter<string>();
    addNewItem(value: string) {
            this.userlist.emit(value);
-            }
+    }
 
 }

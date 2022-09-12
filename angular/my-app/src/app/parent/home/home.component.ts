@@ -7,7 +7,8 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-userlist:any;
+   userlist:any;
+
   constructor(private titleService: Title){
     this.titleService.setTitle("myapp home");
     this.userlist=["amresh","prasad"];

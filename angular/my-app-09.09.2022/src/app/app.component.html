@@ -1,0 +1,34 @@
+<h2>Two way binding</h2>
+<!-- event binding -->
+<button (click)="fontsize('inc')">+</button>
+<button (click)="fontsize('dec')">-</button>
+<!-- interpolation -->
+{{fontSize}}
+<!-- properties binding -->
+<p [style.fontSize.px]='fontSize'>amresh</p>
+
+<router-outlet></router-outlet>
+
+<h2>Single binding</h2>
+<!-- single binding -->
+
+<div>
+  <input #input (keyup)="keyup(input.value)" placeholder="Enter the value">
+  <h2 style="color:red ;">{{ text }}</h2>
+</div>
+
+
+<h2> Two way binding</h2>
+<h2>Example 2</h2>
+<input type="text" #textvalue name="value" [(ngModel)]="value"><BR><BR><BR><BR>
+<input type="text" #textvalue name="value" [(ngModel)]="value"><BR>
+
+<button (click)="clearValue()">Clear</button>
+<button (click)="add(textvalue.value)">add</button>
+
+<ul>
+  <li *ngFor="let item of array ">
+    {{array}}
+  </li>
+</ul>
+
