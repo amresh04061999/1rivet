@@ -52,7 +52,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let employee of Employee">
+      <tr *ngFor="let employee of Employees">
         <th>{{ employee.id }}</th>
         <td>{{employee.employee_name}}</td>
         <td>{{ employee.employee_salary }}</td>
@@ -63,7 +63,75 @@
           <button type="button" (click)="Delete(employee.id)">Delete</button>
         </td>
       </tr>
+
+
     </tbody>
   </table>
+
+  <!-- ngif -->
+  <div style="text-align:center">
+    <h1>
+      Welcome to ngIf app
+    </h1>
+    <h1>
+      <button (click)="toggleOn =!toggleOn">Toggle Greetings</button>
+    </h1>
+    <div *ngIf="!toggleOn">
+    <h2>Hello</h2>
+    <p>Good morning to you</p>
+    <hr>
+    <p>Today is Friday and this is a dummy text element to make you feel better</p>
+    <p>Understanding the ngIf directive with the else clause</p>
+    </div>
+
+  </div>
+  <div style="border:2px solid black;text-align:center">
+    <h1>Simple Example </h1>
+
+    <div class="row">
+      Show <input type="checkbox" [(ngModel)]="showMe" />
+    </div>
+
+    <h3>ngIf using to checked or uncheck</h3>
+    <p *ngIf="showMe">
+      ShowMe is checked
+    </p>
+    <p *ngIf="!showMe">
+      ShowMe is unchecked
+    </p>
+
+    <h4>ngIf Else Using </h4>
+    <p *ngIf="showMe; else elseBlock1">
+      ShowMe is checked
+    </p>
+    <ng-template #elseBlock1>
+      <p>ShowMe is unchecked Using elseBlock</p>
+    </ng-template>
+
+    <h1>ngIf then else</h1>
+    <p *ngIf="showMe; then thenBlock2 else elseBlock2">
+      This is not rendered
+    </p>
+    <ng-template #thenBlock2>
+      <p>ShowMe is checked Using thenblock</p>
+    </ng-template>
+    <ng-template #elseBlock2>
+      <p>ShowMe is unchecked Using elseBlock</p>
+    </ng-template>
+
+    <h1>using hidden </h1>
+    <p [hidden]="showMe" style="color: red;">
+        content to render, when the condition is true  using hidden property binding
+    </p>
+    <p [hidden]="!showMe" style="color: blue;">
+        content to render, when the condition is false. using hidden property binding
+    </p>
 </div>
 
+
+
+</div>
+
+<app-ng-switch></app-ng-switch>
+<app-ng-style></app-ng-style>
+<app-ng-class></app-ng-class>

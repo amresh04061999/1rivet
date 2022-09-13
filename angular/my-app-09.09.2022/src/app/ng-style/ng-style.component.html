@@ -1,0 +1,6 @@
+
+<h1>NgStyle suing </h1>
+<ul *ngFor="let person of people">
+  <li [style.color]="getColor(person.country)">{{ person.name }} ({{ person.country }})
+  </li>
+</ul>

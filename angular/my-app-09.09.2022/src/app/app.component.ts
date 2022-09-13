@@ -13,7 +13,9 @@ export class AppComponent {
  public defaultSize:number;
  public text:string
  array :any;
-
+//  ngif
+public toggleOn:any;
+public showMe:any;
 constructor(){
 this.fontSize=50;
 this.defaultSize=20;
@@ -26,7 +28,7 @@ this.array=["amresh","prasad"];
   fontsize(changeFont:string):void{
     this.fontSize=changeFont === 'dec'?this.fontSize-10:this.fontSize+10;
 
-    if(this.fontSize===0 || this.fontSize===100){
+    if(this.fontSize=== 0 || this.fontSize===100){
         this.fontSize=this.defaultSize;
     }
 
@@ -65,14 +67,14 @@ arraydata: any[] = [
   },
   {
     "name": "Aladdin"
-  }, 
+  },
   {
     "name": "Downton Abbey"
   }
 ];
 
 // Employee Data
- Employee:any[]= [
+ Employees:any[]= [
     {"id":"1","employee_name":"WdqBvFe","employee_salary":"797","employee_age":"36","profile_image":"https://img.freepik.com/free-vector/cute-koala-with-cub-cartoon-icon-illustration_138676-2839.jpg?w=2000"},
     {"id":"1925","employee_name":"Menaka6","employee_salary":"24501","employee_age":"24501","profile_image":"https://img.freepik.com/free-vector/cute-koala-with-cub-cartoon-icon-illustration_138676-2839.jpg?w=2000"},
     {"id":"1969","employee_name":"2381","employee_salary":"123","employee_age":"23","profile_image":"https://img.freepik.com/free-vector/cute-koala-with-cub-cartoon-icon-illustration_138676-2839.jpg?w=2000"},
@@ -94,11 +96,13 @@ arraydata: any[] = [
 //  }
  Delete(element: number) {
   console.log(element)
-  this.Employee.forEach((value,id)=>{
-    console.log
-    if(value.id==element) this.Employee.splice(id,1);
+  this.Employees.forEach((value,index_id)=>{
+    if(value.id==element) this.Employees.splice(index_id,1);
 });
- 
+
 }
+
+
+//ngif
 
 }

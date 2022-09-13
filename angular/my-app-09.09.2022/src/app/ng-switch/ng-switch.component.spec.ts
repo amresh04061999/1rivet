@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AppChildComponent } from './app-child.component';
+import { NgSwitchComponent } from './ng-switch.component';
 
-describe('AppChildComponent', () => {
-  let component: AppChildComponent;
-  let fixture: ComponentFixture<AppChildComponent>;
+describe('NgSwitchComponent', () => {
+  let component: NgSwitchComponent;
+  let fixture: ComponentFixture<NgSwitchComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AppChildComponent ]
+      declarations: [ NgSwitchComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AppChildComponent);
+    fixture = TestBed.createComponent(NgSwitchComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
