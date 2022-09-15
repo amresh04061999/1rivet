@@ -1,21 +1,24 @@
 
 <div class="main-container  d-flex h-100 flex-column ">
   <!-- header -->
-  <app-parent></app-parent>
+  <div>
+     <app-header></app-header>
+    </div>
+
   <!-- end -->
-  <div class="main border border-primary d-flex h-100 ">
+  <div class="main border border-secondary d-flex h-100 ">
     <!-- side bar -->
 
       <div class="aside">
-        <app-aside></app-aside>
+    <app-navigation></app-navigation>
       </div>
-      <main class="border border-primary flex-grow-1 ">
+      <main class="border border-secondary flex-grow-1 d-flex  align-items-cente">
         <router-outlet></router-outlet>
       </main>
     </div>
 
   <!-- footer -->
-  <app-footer></app-footer>
+<app-footer></app-footer>
 </div>
 
 

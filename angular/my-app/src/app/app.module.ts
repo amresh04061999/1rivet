@@ -2,13 +2,11 @@ import { NgModule } from '@angular/core';
 import { BrowserModule,Title } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ParentComponent } from './parent/parent.component';
-import { HomeComponent } from './parent/home/home.component';
-import { AboutComponent } from './parent/about/about.component';
-import { ContactComponent } from './parent/contact/contact.component';
-import { FooterComponent } from './footer/footer.component';
-import { AsideComponent } from './aside/aside.component';
-import { HomechildComponent } from './parent/home/homechild/homechild.component';
+
+import { CoreModule } from './core/core.module';
+import { HomeComponent } from './home/home.component';
+import { AboutModule } from './about/about.module';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 
@@ -18,17 +16,18 @@ import { HomechildComponent } from './parent/home/homechild/homechild.component'
 
   declarations: [
     AppComponent,
-    ParentComponent,
     HomeComponent,
-    AboutComponent,
-    ContactComponent,
-    FooterComponent,
-    AsideComponent,
-    HomechildComponent,
+    PageNotFoundComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CoreModule,
+    AboutModule
+  ],
+  exports:[
+    // AppRoutingModule,
   ],
   // providers: [],
   bootstrap: [AppComponent]
