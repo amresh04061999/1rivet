@@ -1,19 +1,9 @@
 {
   "customers": [
     {
-      "id": 3,
-      "name": "rajesh",
-      "email": "Rajesh@gmail.com"
-    },
-    {
-      "id": 6,
-      "name": "rajesh",
-      "email": "Rajesh@gmail.com"
-    },
-    {
-      "id": 7,
-      "name": "rajesh",
-      "email": "Rajesh@gmail.com"
+      "id": 10,
+      "name": "amresh",
+      "email": "amresh@gmail.com"
     }
   ]
 }

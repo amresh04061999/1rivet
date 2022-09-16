@@ -6,18 +6,19 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CommonService {
-  
+
   bookUrl="http://localhost:3000/customers"
   constructor(
-    private _http:HttpClient ) {
+     public _http:HttpClient ) {
    }
 
-  public getcustomes(){
-    
+  public getcustomers(){
+
     return this._http.get(this.bookUrl)
    }
 
-   BookDelete (bookid:String):Observable<number>{
+   onDelete (bookid:String):Observable<number>{
+    debugger
     let httpheaders=new HttpHeaders()
     .set('Content-type','application/Json');
     let options={

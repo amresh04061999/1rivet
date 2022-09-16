@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CommonService } from 'src/app/common.service';
 
 @Component({
@@ -9,9 +10,12 @@ import { CommonService } from 'src/app/common.service';
 export class CustomerListComponent implements OnInit {
   public collection:any;
   customers:any=[];
-  getcustomes: any;
+  // getcustomers:any;
+  // getcustome: any;
   constructor(
-    private CommonService:CommonService
+    private CommonService:CommonService,
+    private router:Router,
+    private activateroute:ActivatedRoute
   ) {
 
     this.customers=[
@@ -45,7 +49,7 @@ export class CustomerListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-  this.CommonService.getcustomes().subscribe((result)=>{
+  this.CommonService.getcustomers().subscribe((result)=>{
     this.collection=result;
     console.log(this.collection);
 
@@ -60,10 +64,22 @@ export class CustomerListComponent implements OnInit {
 
 // }
 
-BookDelete(bookid:string){
-  this.CommonService.BookDelete(bookid)
+onDelete(bookid:string){
+  this.CommonService.onDelete(bookid)
   .subscribe((book: any)=>{
-    this.getcustomes();
+    if(book){
+      this.CommonService.getcustomers().subscribe((result)=>{
+        this.collection=result;
+        // console.log(this.collection);
+
+      });
+    }
+
+    // this.CommonService();
   })
+  // this.router.navigate(['customer','delete']);
 }
+
 }
+
+
