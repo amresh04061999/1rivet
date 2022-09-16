@@ -12,13 +12,13 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let customer of customers">
+      <tr *ngFor="let customer of collection">
         <td>{{customer.id}}</td>
         <td>{{customer.name}}</td>
         <td>{{customer.email}}</td>
         <td>
           <button type="button" class="btn btn-primary" [routerLink]="['../','edit',customer.id]">Edit</button>
-          <button type="button" class="btn btn-primary ms-2" (click)="Ondelete(customer.id)">Delete</button>
+          <button type="button" class="btn btn-primary ms-2" (click)="BookDelete(customer.id)">Delete</button>
         </td>
       </tr>
     </tbody>

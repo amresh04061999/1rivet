@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonService } from 'src/app/common.service';
 
 @Component({
   selector: 'app-customer-list',
@@ -6,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./customer-list.component.scss']
 })
 export class CustomerListComponent implements OnInit {
-
+  public collection:any;
   customers:any=[];
-  constructor() {
+  getcustomes: any;
+  constructor(
+    private CommonService:CommonService
+  ) {
 
     this.customers=[
       {
@@ -41,14 +45,25 @@ export class CustomerListComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  this.CommonService.getcustomes().subscribe((result)=>{
+    this.collection=result;
+    console.log(this.collection);
 
-
-  }
-  Ondelete(id: number) {
-    console.log(id)
-    this.customers.forEach((value : any,index_id: any)=>{
-      if(value.id==id) this.customers.splice(index_id,1);
   });
 
+  }
+//   Ondelete(id: number) {
+//     console.log(id)
+//     this.collection.forEach((value : any,index_id: any)=>{
+//       if(value.id==id) this.collection.splice(index_id,1);
+//   });
+
+// }
+
+BookDelete(bookid:string){
+  this.CommonService.BookDelete(bookid)
+  .subscribe((book: any)=>{
+    this.getcustomes();
+  })
 }
 }
