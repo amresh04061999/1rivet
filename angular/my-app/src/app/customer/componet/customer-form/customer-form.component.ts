@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { customer } from 'src/app/customer.model';
+import { CommonService } from 'src/app/common.service';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-customer-form',
@@ -8,21 +11,23 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class CustomerFormComponent implements OnInit {
    public title!:string;
-   public btn!:string
+  //  public btn!:string
     customerid:number
-  constructor( private router:Router,
+   public issubmited:Boolean;
+    public customers:customer;
+  constructor(
+    // private commonservices:CommonServic
+    private router:Router,
     private activaterouter:ActivatedRoute
   )
   {
-
+    //  get using routing to get id 
     this.customerid=this.activaterouter.snapshot.params['customerid'];
-    console.log(this.customerid)
+    console.log(this.customerid);
+    this.customers=new customer();
+    this.issubmited=false;
+    
 
-  }
-
-
-  onSave(){
-    this.router.navigate(['customer','customerlist'])
   }
 
   ngOnInit(): void {
@@ -30,7 +35,19 @@ export class CustomerFormComponent implements OnInit {
     this.title="Add Customer";
     this.title=this.customerid? 'Edit Customer':'Add Customer';
     // this.btn=this.customerid?'Edit':'Add';
-    // console.log(activaterouter);
   }
+
+
+  
+// form startW
+@ViewChild('customerForm') customerForm!: FormGroup;
+// customer = new user(18, 'amresh', 'parasad','amresh@gmail.com');
+onSubmit(){
+  this.issubmited=true;
+console.log(this.customerForm)
+console.log(this.customerForm.value)
+console.log(this.customers);
+}
+
 
 }

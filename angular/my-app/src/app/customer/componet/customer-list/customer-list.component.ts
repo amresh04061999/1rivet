@@ -13,7 +13,7 @@ export class CustomerListComponent implements OnInit {
   // getcustomers:any;
   // getcustome: any;
   constructor(
-    private CommonService:CommonService,
+    public CommonService:CommonService,
     private router:Router,
     private activateroute:ActivatedRoute
   ) {

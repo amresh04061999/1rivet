@@ -1,24 +1,19 @@
-
-<div class="main-container  d-flex h-100 flex-column ">
-  <!-- header -->
-  <div>
-     <app-header></app-header>
-    </div>
-
-  <!-- end -->
-  <div class="main border border-secondary d-flex h-100 ">
-    <!-- side bar -->
-
-      <div class="aside">
+<div class="main-container d-flex h-100">
+  <!--===== start Navigation bar ====-->
+  <div class="aside header h-100">
     <app-navigation></app-navigation>
-      </div>
-      <main class="border border-secondary flex-grow-1 d-flex  align-items-cente">
-        <router-outlet></router-outlet>
-      </main>
+  </div>
+  <!--===== End Navigation bar ====-->
+  <div class="section flex-grow-1 h-100">
+    <!--===== start header ====-->
+    <div class="header">
+      <app-header></app-header>
     </div>
-
-  <!-- footer -->
-<app-footer></app-footer>
+    <main class="flex-grow-1 d-flex flex-column h-100">
+      <!-- ====== End  header ====-->
+      <div class="h-100">
+        <router-outlet></router-outlet>
+      </div>
+    </main>
+  </div>
 </div>
-
-

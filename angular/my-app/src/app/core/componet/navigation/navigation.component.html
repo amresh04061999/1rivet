@@ -1,38 +1,83 @@
+  
 
 
-<!--Main Navigation-->
-<header>
   <!-- Sidebar -->
-  <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
-    <div class="position-sticky">
-      <div class="list-group list-group-flush mt-4">
-
-        <a  class="list-group-item list-group-item-action py-2 ripple active">
-          <i class="fas fa-chart-area fa-fw me-3"></i><span>Dashbord</span>
-        </a>
-        <a  class="list-group-item list-group-item-action py-2 ripple"
-          ><i class="fas fa-lock fa-fw me-3"></i><span>Directive</span></a
-        >
-        <a  class="list-group-item list-group-item-action py-2 ripple"
-          ><i class="fas fa-chart-line fa-fw me-3"></i><span>Pipe</span></a
-        >
-        <a class="list-group-item list-group-item-action py-2 ripple">
-          <i class="fas fa-chart-pie fa-fw me-3"></i><span>Single Binding</span>
-        </a>
-        <a  class="list-group-item list-group-item-action py-2 ripple"
-          ><i class="fas fa-chart-bar fa-fw me-3"></i><span>Two way binding</span></a
-        >
-        <a  class="list-group-item list-group-item-action py-2 ripple"
-        ><i class="fas fa-chart-bar fa-fw me-3"></i><span>Interpolation</span></a
-      >
-      <a  class="list-group-item list-group-item-action py-2 ripple"
-        ><i class="fas fa-chart-bar fa-fw me-3"></i><span>Properties binding</span></a
-      >
-
+  <nav id="sidebar" class="h-100" >
+      <div class="sidebar-header ps-4">
+          <h3>ANGULAR</h3>
       </div>
-    </div>
+      <ul class="list-unstyled components overflow-auto h-100">
+          <li class="active">
+             <a href="#DirectiveSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Directive Type</a>
+              <ul class="collapse list-unstyled" id="DirectiveSubmenu">
+                <li>
+                  <a href="#attributeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Attribute</a>
+                  <ul class="collapse list-unstyled" id="attributeSubmenu">
+                    <li><a href="">Ngstyle</a></li>
+                    <li><a href="">NgClass</a></li>
+                    <li><a href="">NgModel</a></li>
+                  </ul>
+                </li>
+                  <li>
+                    <a href="#structuralSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Structural</a>
+                    <ul class="collapse list-unstyled" id="structuralSubmenu">
+                      <li><a href="">Ngif</a></li>
+                      <li><a href="">Ngfor</a></li>
+                      <li><a href="">NgSwitch</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#CustomeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Custome</a>
+                    <ul class="collapse list-unstyled" id="CustomeSubmenu">
+                      <li><a href="">Custome1</a></li>
+                      <li><a href="">Custome2</a></li>
+                    </ul>
+                  </li>
+                 
+              </ul>
+          </li>
+          <li>
+              <a href="#PipeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pipe</a>
+              <ul class="collapse list-unstyled" id="PipeSubmenu">
+                  <li>
+                    <a href="#inbuilSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Inbuild Pipe</a>
+                    <ul class="collapse list-unstyled" id="inbuilSubmenu">
+                      <li><a href="">CurrencyPipe</a></li>
+                      <li><a href="">DatePipe</a></li>
+                      <li><a href="">DecimalPipe</a></li>
+                      <li><a href="">JsonPipe</a></li>
+                      <li><a href="">LowerCasePipe</a></li>
+                      <li><a href="">UpperCasePipe</a></li>
+                      <li><a href="">PercentPipe</a></li>
+                      <li><a href="">SlicePipe</a></li>
+                      <li><a href="">AsyncPipe</a></li>
+                     
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#customeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Custome Pipe</a>
+                    <ul class="collapse list-unstyled" id="customeSubmenu">
+                      <li><a href=""> Custome Pipe 1</a></li>
+                      <li><a href=""> Custome Pipe 2</a></li>
+                    </ul>
+                  </li>
+                 
+              </ul>
+          </li>
+          <li>
+            <a href="#BindigSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Bindig</a>
+            <ul class="collapse list-unstyled" id="BindigSubmenu">
+                <li>
+                  <a href="">One Way Bindig</a>
+                </li>
+                <li>
+                  <a href="">Two Way Bindig</a>
+                </li>
+               
+            </ul>
+        </li>
+          
+      </ul>
   </nav>
-  <!-- Sidebar -->
-</header>
-<!--Main Navigation-->
+
 

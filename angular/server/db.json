@@ -1,9 +1,53 @@
 {
   "customers": [
     {
-      "id": 10,
-      "name": "amresh",
+      "id": 2,
+      "firsName": "amresh",
+      "lastName": "prasad",
+      "email": "amresh@gmail.com"
+    },
+    {
+      "id": 2,
+      "firsName": "amresh",
+      "lastName": "prasad",
+      "email": "amresh@gmail.com"
+    },
+    {
+      "id": 2,
+      "firsName": "amresh",
+      "lastName": "prasad",
+      "email": "amresh@gmail.com"
+    },
+    {
+      "id": 2,
+      "firsName": "amresh",
+      "lastName": "prasad",
+      "email": "amresh@gmail.com"
+    },
+    {
+      "id": 2,
+      "firsName": "amresh",
+      "lastName": "prasad",
+      "email": "amresh@gmail.com"
+    },
+    {
+      "id": 2,
+      "firsName": "amresh",
+      "lastName": "prasad",
+      "email": "amresh@gmail.com"
+    },
+    {
+      "id": 2,
+      "firsName": "amresh",
+      "lastName": "prasad",
+      "email": "amresh@gmail.com"
+    },
+    {
+      "id": 2,
+      "firsName": "amresh",
+      "lastName": "prasad",
       "email": "amresh@gmail.com"
     }
+
   ]
 }
