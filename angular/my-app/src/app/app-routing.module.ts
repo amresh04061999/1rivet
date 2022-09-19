@@ -1,6 +1,9 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
+import { NgclassComponent } from './directive-type/attribute/ngclass/ngclass.component';
+import { DirectiveTypeComponent } from './directive-type/directive-type.component';
+import { NgforComponent } from './directive-type/Structural/ngfor/ngfor.component';
 import { HomeComponent } from './home/home.component';
 
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -10,26 +13,20 @@ const routes: Routes = [
     path:'',
     redirectTo:'home',
     pathMatch:'full',
+  },
+  {path:'home',component:HomeComponent, },
 
-  },
-  {
-    path:'home',component:HomeComponent,
-  },
-  {
-    path:'about',component:AboutComponent,
-  },
-  {
-    path: 'about', loadChildren: () => import('./about/about.module').then(m => m.AboutModule)
-   },
+  {path: 'about', loadChildren: () => import('./about/about.module').then(m => m.AboutModule)},
+  { path: 'directive', loadChildren: () => import('./directive-type/directive-type.module').then(m => m.DirectiveTypeModule)},
+
   { path: 'customer', loadChildren: () => import('./customer/customer.module').then(m => m.CustomerModule) },
-  {
-    path:'**',component:PageNotFoundComponent
 
-  }
 
+  { path: 'pipe', loadChildren: () => import('./pipe-type/pipe-type.module').then(m => m.PipeTypeModule) },
+
+  // { path:'**',component:PageNotFoundComponent}
 
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

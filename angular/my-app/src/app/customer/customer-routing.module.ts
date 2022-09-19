@@ -5,7 +5,7 @@ import { CustomerListComponent } from './componet/customer-list/customer-list.co
 import { CustomerComponent } from './customer.component';
 
 const routes: Routes = [
-  
+
   {
     path: '',
     component: CustomerComponent,
@@ -15,7 +15,7 @@ const routes: Routes = [
         pathMatch: 'full',
         redirectTo: 'customerlist',
       },
-      { path: 'customerlist', component: CustomerListComponent 
+      { path: 'customerlist', component: CustomerListComponent
     },
       { path: 'customerform', component: CustomerFormComponent },
     ],

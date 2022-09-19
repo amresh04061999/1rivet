@@ -1,5 +1,5 @@
 <div class="p-4">
-  
+
   <div class="text-white p-2 ps-4 rounded-pill mb-4" style="background-color:  #7386D5;">
     <h5>Dashbord/ {{title}} </h5>
   </div>
@@ -7,31 +7,44 @@
   <div class="form-group">
     <label for="firstName">FirstName</label>
     <input type="text" class="form-control" id="firstName" name="firstName" minlength="3" [(ngModel)]="customers.fisrtName" #firstname="ngModel" placeholder="Enter firstName " required>
-
   </div><br>
-  <div *ngIf="((issubmited && firstname.invalid)  && (firstname.dirty || firstname.touched))"
+  <div *ngIf=" issubmited || (firstname.invalid  && (firstname.dirty || firstname.touched))"
     class="alert">
-  <div *ngIf="firstname.errors?.['required']">
-    Name is required.
+  <div *ngIf="firstname.errors?.['required']" class="text-danger">
+    FirstNmae is required.
   </div>
   <div *ngIf="firstname.errors?.['minlength']">
-    Name must be at least  characters long.
+    Name must be at least 3  characters long.
   </div>
-
 </div>
   {{customers.fisrtName}}
   <div class="form-group">
     <label for="lastName">LastName</label>
-    <input type="text" class="form-control" id="lastName" name="lastName" [(ngModel)]="customers.lastName" placeholder="Enter LastName" required>
+    <input type="text" class="form-control" id="lastName"minlength="3" name="lastName" [(ngModel)]="customers.lastName"  #lastname="ngModel" placeholder="Enter LastName" required>
   </div><br>
+  <div *ngIf=" issubmited || (lastname.invalid  && (lastname.dirty || lastname.touched))"
+    class="alert">
+  <div *ngIf="lastname.errors?.['required']" class="text-danger">
+    Name is required.
+  </div>
+  <div *ngIf="lastname.errors?.['minlength']">
+    Name must be at least 3 characters long.
+  </div>
+</div>
   {{customers.lastName}}
   <div class="form-group">
     <label for="email">Email address</label>
-    <input type="text" class="form-control" id="email" name="email" [(ngModel)]="customers.email" aria-describedby="emailHelp" placeholder="Enter email" required>
+    <input type="text" class="form-control" id="email" name="email" [(ngModel)]="customers.email" #email="ngModel" aria-describedby="emailHelp" placeholder="Enter email" required email>
   </div><br>
+  <div *ngIf=" issubmited || (email.invalid  && (email.dirty || email.touched))"
+    class="alert">
+  <div *ngIf="email.errors?.['required']" class="text-danger">
+    Email is required.
+  </div>
+</div>
   {{customers.email}}
-  <button *ngIf="!customerid" type="submit" class="btn btn-primary mt-3">Add</button>
-  <button *ngIf="customerid" type="submit" class="btn btn-primary mt-3">Edit</button>
+  <button *ngIf="!customerid" type="submit" class="btn btn-primary mt-3" [disabled]="customerForm.invalid">Add</button>
+  <button *ngIf="customerid" type="submit" class="btn btn-primary mt-3" [disabled]="customerForm.invalid">Edit</button>
   <button type="button" class="btn btn-primary mt-3 ms-2" routerLink="../customerlist">Cancel</button><br><br>
   {{customers | json}}
 </form>
