@@ -1,65 +1,148 @@
 <div class="p-4">
     <div class="text-white p-2 ps-4 rounded-pill  " style="background-color:  #7386D5;">
         <h5>user-form</h5>
-      </div> 
+      </div>
   <form class="p-5" [formGroup]="userform" (ngSubmit)="onSubmit()">
     <div class="form-row  d-flex mt-3 ">
       <div class="form-group col-md-6">
         <label for="firstname">Firstname</label>
-        <input type="text" class="form-control" id="firstname"
+        <input appTrim type="text" class="form-control" id="firstname"
          formControlName="firstname"
           placeholder="Firstname"
-          [ngClass]="{ 'is-invalid': submitted && f['firstname'].errors }">
-      </div>
-      <div *ngIf="submitted && f['firstname'].errors" class="invalid-feedback">
-        <div *ngIf="f['firstname'].errors['required']">Fullname is required</div>
-      </div>
-    </div>
+          [ngClass]="{'is-invalid' : user['firstname'].invalid && (submitted || user['firstname'].touched || user['firstname'].dirty),
+                    'is-valid' : user['firstname'].valid && (submitted || user['firstname'].touched || user['firstname'].dirty)}" >
+
+          <div *ngIf="user['firstname'].invalid && (submitted|| user['firstname'].touched || user['firstname'].dirty)" class="danger">
+            <div *ngIf="user['firstname'].errors?.['required']">
+              First Name is required.
+            </div>
+
+            <div *ngIf="user['firstname'].errors?.['minlength']">
+              Please Enter minimum 3 character
+             </div>
+             <div *ngIf="user['firstname'].errors?.['pattern']">
+              Usin only characters
+        </div>
+            <div *ngIf="user['firstname'].errors?.['maxlength'] ">
+              Please Enter maximum 20 character
+             </div>
+        </div>
+        <div  *ngIf="user['firstname'].valid" class="text-sucess">
+            Good you are cool person
+         </div>
+      </div><br>
+
       <div class="form-group col-md-6 ms-5 ">
         <label for="lastname">Lastname</label>
-        <input type="text" class="form-control" id="lastname" placeholder="Firstname">
+        <input type="text" class="form-control" id="lastname" placeholder="Firstname" formControlName="lastname"
+        [ngClass]="{'is-invalid' : userform.controls['lastname'].invalid && (submitted || userform.controls['lastname'].touched || userform.controls['firstname'].dirty),
+        'is-valid' : userform.controls['lastname'].valid && (submitted || userform.controls['lastname'].touched || userform.controls['lastname'].dirty)}" >
+
+        <div *ngIf="userform.controls['lastname'].invalid && (submitted|| userform.controls['lastname'].touched || userform.controls['lastname'].dirty)" class="danger">
+          <div *ngIf="user['lastname'].errors?.['required']">
+            Last Name Name is required.
+          </div>
+
+          <div *ngIf="user['lastname'].errors?.['minlength']">
+            Please Enter minimum 3 character
+           </div>
+
+          <div *ngIf="user['lastname'].errors?.['maxlength']">
+            Please Enter maximum 20 character
+           </div>
+
       </div>
-     
- 
+      </div>
+    </div>
+
+
+
   <div class="form-row  d-flex mt-3 ">
     <div class="form-group col-md-6">
       <label for="inputEmail4">Email</label>
-      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+      <input type="email" class="form-control" id="inputEmail4" placeholder="Email" formControlName="email"
+      [ngClass]="{'is-invalid' : userform.controls['email'].invalid && (submitted || userform.controls['email'].touched || userform.controls['email'].dirty),
+      'is-valid' : userform.controls['email'].valid && (submitted || userform.controls['email'].touched || userform.controls['email'].dirty)}">
+      <div *ngIf="userform.controls['email'].invalid && (submitted|| userform.controls['email'].touched || userform.controls['email'].dirty)" class="danger">
+        <div *ngIf="user['email'].errors?.['required']">
+          Email is required.
+        </div>
+
+        <div *ngIf="user['email'].errors?.['pattern']">
+           Invalid email
+         </div>
+
+    </div>
     </div>
     <div class="form-group col-md-6 ms-5">
       <label for="inputPassword4">Password</label>
-      <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+      <input type="password" class="form-control" id="inputPassword4" placeholder="Password" formControlName="password"
+      [ngClass]="{'is-invalid' : userform.controls['password'].invalid && (submitted || userform.controls['password'].touched || userform.controls['password'].dirty),
+      'is-valid' : userform.controls['password'].valid && (submitted || userform.controls['password'].touched || userform.controls['password'].dirty)}"
+      >
+      <div *ngIf="userform.controls['password'].invalid && (submitted|| userform.controls['password'].touched || userform.controls['password'].dirty)" class="danger">
+        Password is required.
+   </div>
+
     </div>
+
+
   </div>
- 
+
 
   <div class="form-row d-flex my-2 ">
     <div class="form-group  col-md-3">
       <label for="inputAddress">Address</label>
-      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" formControlName="address"
+      [ngClass]="{'is-invalid' : userform.controls['address'].invalid && (submitted || userform.controls['address'].touched || userform.controls['address'].dirty),
+      'is-valid' : userform.controls['address'].valid && (submitted || userform.controls['address'].touched || userform.controls['address'].dirty)}">
+      <div *ngIf="userform.controls['address'].invalid && (submitted|| userform.controls['address'].touched || userform.controls['address'].dirty)" class="danger">
+        Address is required.
+   </div>
     </div>
-    
+
     <div class="form-group col-md-3 ms-4">
       <label for="inputCity">City</label>
-      <input type="text" class="form-control" id="inputCity">
+      <input type="text" class="form-control" id="inputCity" formControlName="city"
+      [ngClass]="{'is-invalid' : userform.controls['city'].invalid && (submitted || userform.controls['city'].touched || userform.controls['city'].dirty),
+      'is-valid' : userform.controls['city'].valid && (submitted || userform.controls['city'].touched || userform.controls['city'].dirty)}">
+      <div *ngIf="userform.controls['city'].invalid && (submitted|| userform.controls['city'].touched || userform.controls['city'].dirty)" class="danger">
+       City is required.
+   </div>
     </div><br>
     <div class="form-group col-md-3 ms-4">
       <label for="inputState">State</label>
-      <input type="text" class="form-control" id="inputState">
+      <input type="text" class="form-control" id="inputState" formControlName="state"
+      [ngClass]="{'is-invalid' : userform.controls['state'].invalid && (submitted || userform.controls['state'].touched || userform.controls['state'].dirty),
+      'is-valid' : userform.controls['state'].valid && (submitted || userform.controls['state'].touched || userform.controls['state'].dirty)}">
+      <div *ngIf="userform.controls['state'].invalid && (submitted|| userform.controls['state'].touched || userform.controls['state'].dirty)" class="danger">
+        State is required.
+   </div>
     </div>
     <div class="form-group col-md-2 ms-5">
       <label for="inputZip">Pin code</label>
-      <input type="text" class="form-control" id="inputZip">
+      <input type="text" class="form-control" id="inputZip" formControlName="pincode"
+      [ngClass]="{'is-invalid' : userform.controls['address'].invalid && (submitted || userform.controls['pincode'].touched || userform.controls['pincode'].dirty),
+      'is-valid' : userform.controls['pincode'].valid && (submitted || userform.controls['pincode'].touched || userform.controls['pincode'].dirty)}">
+      <div *ngIf="userform.controls['pincode'].invalid && (submitted|| userform.controls['pincode'].touched || userform.controls['pincode'].dirty)" class="danger">
+        PinCode is required.
+   </div>
     </div>
   </div>
   <div class="form-group my-3">
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <input class="form-check-input" type="checkbox" id="gridCheck"  formControlName="check" required>
       <label class="form-check-label" for="gridCheck">
         Check me out
       </label>
+      <div *ngIf="userform.controls['check'].invalid && (submitted || userform.controls['check'].touched || userform.controls['check'].dirty)" class="danger">
+        <div *ngIf="user['check'].errors && user['check'].errors['required']">
+          Please accept our term and condition.
+        </div>
+        </div>
     </div>
   </div>
   <button type="submit" class="btn btn-primary">Sign in</button>
+  <button type="submit" class="btn btn-primary ms-2" (click)="reset()">Reset</button>
 </form>
 </div>

@@ -11,6 +11,7 @@ import { NgforComponent } from './Structural/ngfor/ngfor.component';
 import { NgswitchComponent } from './Structural/ngswitch/ngswitch.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { CoreModule } from '../core/core.module';
+import { TrimDirective } from './custome/trim.directive';
 
 
 
@@ -23,13 +24,16 @@ import { CoreModule } from '../core/core.module';
     NgifComponent,
     NgforComponent,
     NgswitchComponent,
+    TrimDirective,
 
   ],
   imports: [
     CommonModule,
     DirectiveTypeRoutingModule,
+
   ],
   exports:[
+    TrimDirective,
   ]
 })
 export class DirectiveTypeModule { }

@@ -5,18 +5,26 @@ import { UserComponent } from './user.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { DirectiveTypeModule } from '../directive-type/directive-type.module';
+
+
 
 
 @NgModule({
   declarations: [
     UserComponent,
     UserFormComponent,
-    UserListComponent
+    UserListComponent,
+
   ],
   imports: [
     CommonModule,
     UserRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    DirectiveTypeModule
+
+
+
   ]
 })
 export class UserModule { }
