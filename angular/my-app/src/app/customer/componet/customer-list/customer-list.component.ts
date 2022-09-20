@@ -9,6 +9,7 @@ import { CommonService } from 'src/app/common.service';
 })
 export class CustomerListComponent implements OnInit {
   public collection:any;
+  // customText:string;
   customers:any=[];
   // getcustomers:any;
   // getcustome: any;
@@ -18,6 +19,7 @@ export class CustomerListComponent implements OnInit {
     private activateroute:ActivatedRoute
   ) {
 
+    // this.customText="this is amresh"
     this.customers=[
       {
         id:1,

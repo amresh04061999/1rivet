@@ -1,0 +1,39 @@
+
+<div class="mt-4 p-4 h-100">
+    <!-- <button type="button" class="btn btn-primary" routerLink="../add">Add customer</button><br><br> -->
+    <div class="overflow-auto" style="height: 300px;">
+      <table class="table " >
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>FirstName</th> 
+          <th>number curency</th> 
+          <th>Email</th>
+          <th>PercentPipe</th>
+          <th>Date</th>
+        <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let customer of customers">
+          <td>{{customer.id}}</td>
+          <td>{{customer.name |uppercase }}</td>
+          <!-- uppercase,lowercase -->
+          <td>{{customer.number|currency:'CAD':'symbol-narrow'}}</td>
+          <td>{{customer.email}}</td>
+          <!-- currency: CAD,'CAD':'code','CAD':'symbol','symbol-narrow' -->
+          <td>{{customer.percent |percent: '10.4-4'}}</td>
+          <!-- percent percent: '2.1-2' ,percent: '10.4-4'-->
+          <td>{{customer.date | date:'dd/MM/yyyy'}}</td> 
+          <!--date:  shortTim,fullDate,'d/M/y, dd/MM/yyyy-->
+          <td>
+            <button type="button" class="btn btn-primary" [routerLink]="['../','edit',customer.id]">Edit</button>
+            <!-- <button type="button" class="btn btn-primary ms-2" (click)="onDelete(customer.id)">Delete</button> -->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+    
+  </div>
+  

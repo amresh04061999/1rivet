@@ -5,7 +5,6 @@ import { NavigationComponent } from './componet/navigation/navigation.component'
 import { FooterComponent } from './componet/footer/footer.component';
 import { AppRoutingModule } from '../app-routing.module';
 
-import { DirectiveTypeRoutingModule } from '../directive-type/directive-type-routing.module';
 
 
 
