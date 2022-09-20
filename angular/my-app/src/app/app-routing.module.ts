@@ -17,12 +17,13 @@ const routes: Routes = [
   {path:'home',component:HomeComponent, },
 
   {path: 'about', loadChildren: () => import('./about/about.module').then(m => m.AboutModule)},
+
   { path: 'directive', loadChildren: () => import('./directive-type/directive-type.module').then(m => m.DirectiveTypeModule)},
 
   { path: 'customer', loadChildren: () => import('./customer/customer.module').then(m => m.CustomerModule) },
 
-
   { path: 'pipe', loadChildren: () => import('./pipe-type/pipe-type.module').then(m => m.PipeTypeModule) },
+  { path: 'user', loadChildren: () => import('./user/user.module').then(m => m.UserModule) },
 
   // { path:'**',component:PageNotFoundComponent}
 

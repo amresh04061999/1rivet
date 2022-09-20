@@ -5,6 +5,9 @@ import { NgModelComponent } from './attribute/ng-model/ng-model.component';
 import { NgStyleComponent } from './attribute/ng-style/ng-style.component';
 import { NgclassComponent } from './attribute/ngclass/ngclass.component';
 import { DirectiveTypeComponent } from './directive-type.component';
+import { NgforComponent } from './Structural/ngfor/ngfor.component';
+import { NgifComponent } from './Structural/ngif/ngif.component';
+import { NgswitchComponent } from './Structural/ngswitch/ngswitch.component';
 const routes: Routes = [
   {
     path: '',
@@ -13,11 +16,14 @@ const routes: Routes = [
       {
         path: '',
         pathMatch: 'full',
-        redirectTo: 'ngclass',
+        redirectTo: 'ngstyle',
       },
     { path: 'ngclass', component: NgclassComponent },
     { path: 'ngstyle', component: NgStyleComponent },
     { path: 'ngmodel', component: NgModelComponent },
+    { path: 'ngfor', component: NgforComponent },
+      { path: 'ngif', component: NgifComponent },
+    { path: 'ngswitch', component: NgswitchComponent },
   ]
 
 }]
