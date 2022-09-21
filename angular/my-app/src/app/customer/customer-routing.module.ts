@@ -26,7 +26,7 @@ const routes: Routes = [
     component: CustomerFormComponent,
   },
   {
-    path: 'edit/:customerid',
+    path: 'edit/:name',
     component: CustomerFormComponent,
   },
   {
@@ -34,7 +34,7 @@ const routes: Routes = [
     component: CustomerListComponent,
   },
   {
-    path: ':customerid',
+    path: ':name',
     component: CustomerListComponent,
   },
 ];

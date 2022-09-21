@@ -1,3 +1,15 @@
-<h1 class="text-primary">class</h1>
-
-<router-outlet></router-outlet>
+<div class="main-container border-primary   d-flex h-100 " >
+  <!--===== End Navigation bar ====-->
+  <div class="section flex-grow-1 border-primary h-100">
+    <!--===== start header ====-->
+    <div class="header ">
+    <app-header></app-header>
+    </div>
+    <main class="flex-grow-1   d-flex flex-column p-4">
+      <!-- ===== main ====-->
+      <div class="h-100 border-primary">
+        <router-outlet></router-outlet>
+      </div>
+    </main>
+  </div>
+</div>

@@ -8,13 +8,17 @@ import { AppComponent } from './app.component';
 import { NgSwitchComponent } from './ng-switch/ng-switch.component';
 import { NgStyleComponent } from './ng-style/ng-style.component';
 import { NgClassComponent } from './ng-class/ng-class.component';
+import { HomeComponent } from './home/home.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NgSwitchComponent,
     NgStyleComponent,
-    NgClassComponent
+    NgClassComponent,
+    HomeComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

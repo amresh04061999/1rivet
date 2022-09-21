@@ -1,0 +1,32 @@
+<div class="mt-4 p-4 h-100">
+  <div class="text-white p-2 ps-4 rounded-pill  mb-3 " style="background-color:  #7386D5;">
+    <h5>Empoloye list</h5>
+  </div>
+  <div class="overflow-auto" style="height: 300px;">
+    <table class="table " >
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>DOB</th>
+        <th>Salary</th>
+      <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of details">
+        <td > {{item.name |titlecase}}</td>
+        <td > {{item.gender | uppercase}}</td>
+        <td > {{item.date | date}}</td>
+        <td > {{item.salary |currency:"INR":"symbol"}}</td>
+        <td>
+          <button type="button" class="btn btn-primary" (click)="detailsshow(item)" >Details</button>
+          <button type="button" class="btn btn-success ms-2"   (click)="editemploye(item)">Edit</button>
+          <button type="button" class="btn btn-danger ms-2"  (click)="onDelete(x)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</div>
