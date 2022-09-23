@@ -12,6 +12,7 @@ export class EmployeedetailsComponent implements OnInit {
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+
    this.route.queryParamMap.subscribe(params => this.getprame=params
    )
 }

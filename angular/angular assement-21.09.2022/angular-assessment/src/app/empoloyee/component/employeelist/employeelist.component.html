@@ -14,7 +14,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let item of details">
+      <tr *ngFor="let item of details,let del =index">
         <td > {{item.name |titlecase}}</td>
         <td > {{item.gender | uppercase}}</td>
         <td > {{item.date | date}}</td>
@@ -22,7 +22,7 @@
         <td>
           <button type="button" class="btn btn-primary" (click)="detailsshow(item)" >Details</button>
           <button type="button" class="btn btn-success ms-2"   (click)="editemploye(item)">Edit</button>
-          <button type="button" class="btn btn-danger ms-2"  (click)="onDelete(x)">Delete</button>
+          <button type="button" class="btn btn-danger ms-2"  (click)="onDelete(del)">Delete</button>
         </td>
       </tr>
     </tbody>

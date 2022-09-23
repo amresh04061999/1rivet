@@ -9,48 +9,19 @@ import { CommonService } from 'src/app/common.service';
 })
 export class CustomerListComponent implements OnInit {
   public collection:any;
-  // customText:string;
   customers:any=[];
-  // getcustomers:any;
-  // getcustome: any;
+
   constructor(
     public CommonService:CommonService,
     private router:Router,
     private activateroute:ActivatedRoute
   ) {
 
-    // this.customText="this is amresh"
-    this.customers=[
-      {
-        id:1,
-        name:'Amresh',
-        email:'amresh@gmail.com'
-      },
-      {
-        id:2,
-        name:'Shivam',
-        email:'shivam@gmail.com'
-      },
-      {
-        id:3,
-        name:'Rajesh',
-        email:'rajesh@gmail.com'
-      },
-      {
-        id:4,
-        name:'Mukesh',
-        email:'mukesh@gmail.com'
-      },
-      {
-        id:5,
-        name:'rajesh',
-        email:'rajesh@gmail.com'
-      },
 
-    ]
   }
 
   ngOnInit(): void {
+    // get data in jason server
   this.CommonService.getcustomers().subscribe((result)=>{
     this.collection=result;
     console.log(this.collection);
@@ -58,6 +29,7 @@ export class CustomerListComponent implements OnInit {
   });
 
   }
+
 //   Ondelete(id: number) {
 //     console.log(id)
 //     this.collection.forEach((value : any,index_id: any)=>{
@@ -76,8 +48,6 @@ onDelete(bookid:string){
 
       });
     }
-
-    // this.CommonService();
   })
   // this.router.navigate(['customer','delete']);
 }

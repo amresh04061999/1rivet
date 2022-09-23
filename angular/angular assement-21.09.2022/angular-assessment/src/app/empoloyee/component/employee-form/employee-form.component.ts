@@ -42,19 +42,17 @@ public reset(): void {
 }
 // add a data
   onSubmit(){
+debugger
     this.submitted = true;
-
     if (this.EmployeForm.valid){
       this.Employe.push(this.EmployeForm.value);
-      this.submitted = false;
+      // this.submitted = false;
     }
-    //
   //  this.reset()
   //  this.submitted = false;
     this.EmployeForm.reset();
 
   }
-
 // edite function
   editemploye(item:any){
     this.EmployeForm.patchValue(item);

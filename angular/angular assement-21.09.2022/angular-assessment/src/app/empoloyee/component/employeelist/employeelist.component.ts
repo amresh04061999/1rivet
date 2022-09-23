@@ -8,7 +8,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class EmployeelistComponent implements OnInit {
   @Output() editdata= new EventEmitter();
   customerid:number
-  @Input() details:any;
+  @Input() details:any=[];
    x: any;
   constructor(
     private router:Router,
@@ -21,12 +21,19 @@ export class EmployeelistComponent implements OnInit {
   ngOnInit(): void {
   }
 // delete data function
-  onDelete(x: any){
+
+
+  onDelete(data: any){
+
     var datadelte = confirm(" Do you want to delete ?");
     if ( datadelte== true ) {
-      this.details.splice(x, 1 );
-    }
+      this.details.splice(data,1);
+    // this.details=this.details.filter((items:any)=>
+    //   items.name !==data.name)
   }
+}
+
+
 // show details
   detailsshow(item:any){
     this.router.navigate(['epmpoyee/dtails'],{ queryParams:item  });
