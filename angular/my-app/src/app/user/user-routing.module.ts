@@ -7,12 +7,19 @@ import { UserComponent } from './user.component';
 const routes: Routes = [
   { path: '', component: UserComponent ,
   children:[
-    
-  {
-    path:'userlist',component:UserListComponent
-  },
+     {
+      path:'',
+      pathMatch:'full',
+      redirectTo:'userform'
+     },
+  // {
+  //   path:'userlist',component:UserListComponent
+  // },
   {
     path:'userform',component:UserFormComponent
+  },
+  {
+    path:'edit/:id',component:UserFormComponent
   }
   ]
 

@@ -6,6 +6,7 @@ import { UserFormComponent } from './user-form/user-form.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DirectiveTypeModule } from '../directive-type/directive-type.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -21,10 +22,8 @@ import { DirectiveTypeModule } from '../directive-type/directive-type.module';
     CommonModule,
     UserRoutingModule,
     ReactiveFormsModule,
-    DirectiveTypeModule
-
-
-
+    DirectiveTypeModule,
+    HttpClientModule
   ]
 })
 export class UserModule { }

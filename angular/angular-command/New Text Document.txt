@@ -1,0 +1,82 @@
+
+appShell:
+It is used to generate an app shell for running a server-side version of an app.
+commond => ng generate appShell [options]  
+ shortform=> ng g appShell [options] 
+
+// install angular cli in globale in your pc and provided ng command
+$ npm install -g @angular/cli
+
+//Create new project
+commnad=> ng new my-app
+
+//Run Project or open a project
+comomd=>ng server --open
+shortform=>ng s -o 
+
+// Create Class 
+commnad=>ng generate class <name> [options]
+shotform=>ng g class <name> [options]  
+
+// Create new component 
+commnad=> ng generate component <name> [options]  
+shortform=> ng g component <name> [options]  
+
+// Create new Directive
+commnad=>ng generate directive <name> [options]  
+shortForm=>ng g directive <name> [options]  
+
+//Create module
+It is used to create a new generic NgModule definition in the given or default project.
+command => ng generate module <name> [options]  
+shortform ng g module <name> [options]
+
+//Create New pipe
+//It is used to create a new generic pipe definition in the given or default project.
+commnad =>ng generate pipe <name> [options]  
+ShortForm=>ng g pipe <name> [options] 
+
+//service
+//It is used to create a new, generic service definition in the given or default project.
+ng generate service <name> [options]  
+ng g service <name> [options] 
+
+//Lazy-loading modules
+command=> ng generate module customers --route customers --module app.module
+shortform=>mg g m employe <name> --route emoloy<name> --module app.module
+//enum
+//It is used to create a new, generic enum definition for the given or default project.
+
+commnad => ng generate enum <name> [options]  
+ shortform => ng g enum <name> [options]  
+
+//guard
+//It is used to generate a new, generic route guard definition in the given or default project.
+commnad=>ng generate enum <name> [options]  
+shortform =>ng g enum <name> [options]  
+
+//interface
+//It is used to create a new generic interface definition in the given or default project.
+command =>ng generate interface <name> <type> [options]  
+shortform=> ng g interface <name> <type> [options]  
+
+//library
+//It is used to create a new generic library project in the current workspace.
+command=>ng generate library <name> [options]  
+shortform=>ng g library <name> [options] 
+ 
+//serviceWorker
+//This is used to pass this schematic to the "run" command to create a service worker.
+commnad=>ng generate serviceWorker [options]  
+shortform=>ng g serviceWorker [options] 
+
+universal
+This command is used to pass this schematic to the "run" command to set up server-side rendering for an app.
+commnad=>ng generate universal [options]  
+shortform=>ng g universal [options]  
+
+
+
+
+
+ 

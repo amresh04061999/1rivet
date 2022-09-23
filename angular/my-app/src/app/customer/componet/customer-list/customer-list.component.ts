@@ -9,15 +9,12 @@ import { CommonService } from 'src/app/common.service';
 })
 export class CustomerListComponent implements OnInit {
   public collection:any;
-  customers:any=[];
 
   constructor(
     public CommonService:CommonService,
     private router:Router,
     private activateroute:ActivatedRoute
   ) {
-
-
   }
 
   ngOnInit(): void {
@@ -27,7 +24,6 @@ export class CustomerListComponent implements OnInit {
     console.log(this.collection);
 
   });
-
   }
 
 //   Ondelete(id: number) {

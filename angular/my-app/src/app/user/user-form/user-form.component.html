@@ -1,9 +1,10 @@
-<div class="p-4 overflow-auto" style="height: 500px;">
-    <div class="text-white p-2 ps-4 rounded-pill  " style="background-color:  #7386D5;">
-        <h5>user-form</h5>
+<div class="p-4 overflow-auto" style="height: 300px;">
+    <div class="text-white p-2 ps-4 rounded-pill  " style="background-color:  #7e8bbd;">
+        <h5>User-form</h5>
       </div>
-  <form class="p-5" [formGroup]="userform" (ngSubmit)="onSubmit()">
-    <div class="form-row  d-flex mt-3 ">
+  <form class="p-5" [formGroup]="userform" >
+    <h1>ADD USER</h1>
+    <div class="form-row d-flex  ">
       <div class="form-group col-md-6">
         <label for="firstname">Firstname</label>
         <input appTrim type="text" class="form-control" id="firstname"
@@ -55,9 +56,6 @@
       </div>
       </div>
     </div>
-
-
-
   <div class="form-row  d-flex mt-3 ">
     <div class="form-group col-md-6">
       <label for="inputEmail4">Email</label>
@@ -143,7 +141,8 @@
         </div>
     </div>
   </div>
-  <button type="submit" class="btn btn-primary">Sign in</button>
+  <button type="submit" class="btn btn-success" (click)="onSubmit()">Save</button>
   <button type="submit" class="btn btn-primary ms-2" (click)="reset()">Reset</button>
 </form>
 </div>
+   <app-user-list [users]="users"></app-user-list>
