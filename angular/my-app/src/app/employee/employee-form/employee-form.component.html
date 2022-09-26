@@ -1,0 +1,347 @@
+<div class="container">
+  <h2 class="my-3">{{title}}</h2>
+  <form [formGroup]="empoyeeform">
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="firstname">FirstName:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="firstname"
+            formControlName="firstname"
+            placeholder="Enter firstname"
+            name="firstname"
+            [ngClass]="{
+              'is-invalid':
+                employee['firstname'].invalid &&
+                (issubmited ||
+                  employee['firstname'].touched ||
+                  employee['firstname'].dirty),
+              'is-valid':
+                employee['firstname'].valid &&
+                (issubmited ||
+                  employee['firstname'].touched ||
+                  employee['firstname'].dirty)
+            }"
+          />
+          <div
+            *ngIf="
+              employee['firstname'].invalid &&
+              (issubmited ||
+                employee['firstname'].touched ||
+                employee['firstname'].dirty)
+            "
+            class="text-danger"
+          >
+            <div *ngIf="employee['firstname'].errors?.['required']">
+              firstname required
+            </div>
+            <div *ngIf="employee['firstname'].errors?.['minlength']">
+              minimum 3 characters
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <label for="lastname">LastName:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="lastname"
+            formControlName="lastname"
+            placeholder="Enter lastname"
+            name="lastname"
+            [ngClass]="{
+              'is-invalid':
+                employee['lastname'].invalid &&
+                (issubmited ||
+                  employee['lastname'].touched ||
+                  employee['lastname'].dirty),
+              'is-valid':
+                employee['lastname'].valid &&
+                (issubmited ||
+                  employee['lastname'].touched ||
+                  employee['lastname'].dirty)
+            }"
+          />
+        </div>
+        <div
+          *ngIf="
+            employee['lastname'].invalid &&
+            (issubmited ||
+              employee['lastname'].touched ||
+              employee['lastname'].dirty)
+          "
+          class="text-danger"
+        >
+          <div *ngIf="employee['lastname'].errors?.['required']">
+            Last Name required
+          </div>
+          <div *ngIf="employee['lastname'].errors?.['minlength']">
+            minimum 3 characters
+          </div>
+        </div>
+      </div>
+      <div class="w-100"></div>
+      <div class="col">
+        <div class="form-group">
+          <label for="phoneno">Phone No:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="phoneno"
+            formControlName="phoneno"
+            placeholder="Enter Phoneno"
+            name="phoneno"
+            [ngClass]="{
+              'is-invalid':
+                employee['phoneno'].invalid &&
+                (issubmited ||
+                  employee['phoneno'].touched ||
+                  employee['phoneno'].dirty),
+              'is-valid':
+                employee['phoneno'].valid &&
+                (issubmited ||
+                  employee['phoneno'].touched ||
+                  employee['phoneno'].dirty)
+            }"
+          />
+        </div>
+        <div
+          *ngIf="
+            employee['phoneno'].invalid &&
+            (issubmited ||
+              employee['phoneno'].touched ||
+              employee['phoneno'].dirty)
+          "
+          class="text-danger"
+        >
+          <div *ngIf="employee['phoneno'].errors?.['required']">
+            Phone No required
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            formControlName="email"
+            placeholder="Enter Email"
+            name="email"
+            [ngClass]="{
+              'is-invalid':
+                employee['email'].invalid &&
+                (issubmited ||
+                  employee['email'].touched ||
+                  employee['email'].dirty),
+              'is-valid':
+                employee['email'].valid &&
+                (issubmited ||
+                  employee['email'].touched ||
+                  employee['email'].dirty)
+            }"
+          />
+        </div>
+        <div
+          *ngIf="
+            employee['email'].invalid &&
+            (issubmited || employee['email'].touched || employee['email'].dirty)
+          "
+          class="text-danger"
+        >
+          <div *ngIf="employee['email'].errors?.['required']">
+            Email required
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row my-2">
+      <div class="col">
+        <div class="form-group">
+          <label for="address">Address:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="address"
+            formControlName="address"
+            placeholder="Enter Address"
+            name="address"
+            [ngClass]="{
+              'is-invalid':
+                employee['address'].invalid &&
+                (issubmited ||
+                  employee['address'].touched ||
+                  employee['address'].dirty),
+              'is-valid':
+                employee['address'].valid &&
+                (issubmited ||
+                  employee['address'].touched ||
+                  employee['address'].dirty)
+            }"
+          />
+        </div>
+        <div
+          *ngIf="
+            employee['address'].invalid &&
+            (issubmited ||
+              employee['address'].touched ||
+              employee['address'].dirty)
+          "
+          class="text-danger"
+        >
+          <div *ngIf="employee['address'].errors?.['required']">
+            Address required
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <label for="city">City:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="city"
+            formControlName="city"
+            placeholder="Enter City"
+            name="city"
+            [ngClass]="{
+              'is-invalid':
+                employee['city'].invalid &&
+                (issubmited ||
+                  employee['city'].touched ||
+                  employee['city'].dirty),
+              'is-valid':
+                employee['city'].valid &&
+                (issubmited ||
+                  employee['city'].touched ||
+                  employee['city'].dirty)
+            }"
+          />
+        </div>
+        <div
+          *ngIf="
+            employee['city'].invalid &&
+            (issubmited || employee['city'].touched || employee['city'].dirty)
+          "
+          class="text-danger"
+        >
+          <div *ngIf="employee['city'].errors?.['required']">City required</div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <label for="state">State:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="state"
+            formControlName="state"
+            placeholder="Enter State"
+            name="state"
+            [ngClass]="{
+              'is-invalid':
+                employee['state'].invalid &&
+                (issubmited ||
+                  employee['state'].touched ||
+                  employee['state'].dirty),
+              'is-valid':
+                employee['state'].valid &&
+                (issubmited ||
+                  employee['state'].touched ||
+                  employee['state'].dirty)
+            }"
+          />
+        </div>
+        <div
+          *ngIf="
+            employee['state'].invalid &&
+            (issubmited || employee['state'].touched || employee['state'].dirty)
+          "
+          class="text-danger"
+        >
+          <div *ngIf="employee['state'].errors?.['required']">
+            State required
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <label for="pincode">State:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="pincode"
+            formControlName="pincode"
+            placeholder="Enter Pin code"
+            name="pincode"
+            required=""
+            [ngClass]="{
+              'is-invalid':
+                employee['pincode'].invalid &&
+                (issubmited ||
+                  employee['pincode'].touched ||
+                  employee['pincode'].dirty),
+              'is-valid':
+                employee['pincode'].valid &&
+                (issubmited ||
+                  employee['pincode'].touched ||
+                  employee['pincode'].dirty)
+            }"
+          />
+        </div>
+        <div
+          *ngIf="
+            employee['pincode'].invalid &&
+            (issubmited ||
+              employee['pincode'].touched ||
+              employee['pincode'].dirty)
+          "
+          class="text-danger"
+        >
+          <div *ngIf="employee['pincode'].errors?.['required']">
+            Pincode required
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button
+      *ngIf="!id"
+      type="submit"
+      class="btn btn-primary mt-3"
+      (click)="onsubmited()"
+    >
+      Add
+    </button>
+    <button
+    *ngIf="id"
+    type="submit"
+    class="btn btn-primary mt-3"
+    (click)="editesubmited()"
+  >
+    Edite
+  </button>
+    <!-- <button   type="submit" class="btn btn-primary mt-3" (click)="edite()">Edit</button> -->
+    <button type="submit" class="btn btn-primary ms-2 mt-3" (click)="reset()">
+      Reset
+    </button>
+    <button
+      type="submit"
+      class="btn btn-primary ms-2 mt-3"
+      routerLink="../emloyeeList"
+    >
+      Close
+    </button>
+  </form>
+</div>
+
+<br />
+<br /><br />
+<!-- <div *ngIf="id">
+  <app-employee-list></app-employee-list>
+</div> -->

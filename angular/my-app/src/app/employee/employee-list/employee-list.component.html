@@ -1,0 +1,37 @@
+<button class=" btn btn-primary" (click)="emppyeeform()">ADD EMPLOYEE</button>
+<h3 class="mt-4">EMPLOYEE DETAILS</h3>
+<table class="table mt-3">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Firstname</th>
+        <th scope="col">LastName</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone No</th>
+        <th scope="col">Address</th>
+        <th scope="col">City</th>
+        <th scope="col">state</th>
+        <th scope="col">PinCode</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of Employeelist">
+        <td>{{employee.id}}</td>
+        <td>{{employee.firstname}}</td>
+        <td>{{employee.lastname}}</td>
+        <td>{{employee.email}}</td>
+        <td>{{employee.phoneno}}</td>
+        <td>{{employee.address}}</td>
+        <td>{{employee.city}}</td>
+        <td>{{employee.state}}</td>
+        <td>{{employee.pincode}}</td>
+        <td>
+            <button  class=" btn btn-success" (click)="onEdit(employee.id,employee)">Edit</button>
+            <button class=" btn btn-danger ms-2" (click)="onDelete(employee.id)">Delete</button>
+            <button class=" btn btn-primary ms-2" (click)="showDetails(employee)">Details</button>
+        </td>
+      </tr>
+      
+    </tbody>
+  </table>

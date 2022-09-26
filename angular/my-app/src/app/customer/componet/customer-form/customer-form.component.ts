@@ -22,7 +22,7 @@ export class CustomerFormComponent implements OnInit {
   )
   {
     //  get using routing to get id
-    this.customerid=this.activaterouter.snapshot.params['customerid'];
+    this.customerid=this.activaterouter.snapshot.params['name'];
     console.log(this.customerid);
     this.customers=new customer();
     this.issubmited=false;

@@ -26,6 +26,8 @@ const routes: Routes = [
   { path: 'pipe', loadChildren: () => import('./pipe-type/pipe-type.module').then(m => m.PipeTypeModule) },
 
   { path: 'user', loadChildren: () => import('./user/user.module').then(m => m.UserModule) },
+  
+  { path: 'employee', loadChildren: () => import('./employee/employee.module').then(m => m.EmployeeModule) },
 
   { path:'**',component:PageNotFoundComponent}
 

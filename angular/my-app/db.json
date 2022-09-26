@@ -5,110 +5,67 @@
       "firsName": "amresh",
       "lastName": "prasad",
       "email": "amresh@gmail.com"
-    },
-    {
-      "id": 2,
-      "firsName": "amresh",
-      "lastName": "prasad",
-      "email": "amresh@gmail.com"
     }
   ],
   "user": [
     {
-      "firstname": "amresh",
-      "lastname": "fgfgfgfg",
-      "email": "amresh10@gmailcom",
-      "password": "vbf",
-      "address": "Romm no 311 talav faliya",
+      "firstname": "ssss",
+      "lastname": "ssss",
+      "email": "amresh@gma",
+      "password": "444444444",
+      "address": "Romm no 311 talav faliyas",
       "city": "DAMAN",
-      "state": "sds",
-      "pincode": "396210",
+      "state": "siii",
+      "pincode": "396210sss",
       "check": true,
-      "id": 1
+      "id": 8
     },
     {
-      "firstname": "sss",
-      "lastname": "sss",
-      "email": "amresh10@gmailcom",
-      "password": "y676",
+      "firstname": "add",
+      "lastname": "svdwsvscccc",
+      "email": "amresh@gma",
+      "password": "xxx",
       "address": "Romm no 311 talav faliya",
       "city": "DAMAN",
-      "state": "cs",
+      "state": "sss",
       "pincode": "396210",
       "check": true,
+      "id": 9
+    }
+  ],
+  "employee": [
+    {
+      "firstname": "mukesh",
+      "lastname": "prasad",
+      "phoneno": "1234567898",
+      "email": "amresh1098@gmail.com",
+      "address": "Romm no 311 talav faliya",
+      "city": "gova",
+      "state": "sshhh",
+      "pincode": "396210",
       "id": 2
     },
     {
-      "firstname": "sss",
-      "lastname": "sss",
-      "email": "amresh10@gmailcom",
-      "password": "y676",
+      "firstname": "amreshh",
+      "lastname": "singh",
+      "phoneno": "1234567898",
+      "email": "amresh1098@gmail.com",
       "address": "Romm no 311 talav faliya",
       "city": "DAMAN",
-      "state": "cs",
+      "state": "reeeee",
       "pincode": "396210",
-      "check": true,
-      "id": 3
-    },
-    {
-      "firstname": "sss",
-      "lastname": "sss",
-      "email": "amresh10@gmailcom",
-      "password": "y676",
-      "address": "Romm no 311 talav faliya",
-      "city": "DAMAN",
-      "state": "cs",
-      "pincode": "396210",
-      "check": true,
       "id": 4
     },
     {
-      "firstname": "sss",
-      "lastname": "sss",
-      "email": "amresh10@gmailcom",
-      "password": "y676",
+      "firstname": "amresh",
+      "lastname": "prasad",
+      "phoneno": "1234567898",
+      "email": "amresh1098@gmail.com",
       "address": "Romm no 311 talav faliya",
       "city": "DAMAN",
-      "state": "cs",
+      "state": "a",
       "pincode": "396210",
-      "check": true,
       "id": 5
-    },
-    {
-      "firstname": "sssgdgdg",
-      "lastname": "fgfgfgfg",
-      "email": "amresh10@gmailcom",
-      "password": "vbf",
-      "address": "Romm no 311 talav faliya",
-      "city": "DAMAN",
-      "state": "sds",
-      "pincode": "396210",
-      "check": true,
-      "id": 6
-    },
-    {
-      "firstname": "nhfqweugdkuegmjghe",
-      "lastname": "fgfgfgfg",
-      "email": "amresh10@gmailcom",
-      "password": "vbf",
-      "address": "Romm no 311 talav faliya",
-      "city": "DAMAN",
-      "state": "sds",
-      "pincode": "396210",
-      "check": true,
-      "id": 7
-    },
-    {
-      "firstname": "nhfqweugdkuegmjghe",
-      "lastname": "fgfgfgfg",
-      "email": "amresh10@gmailcom",
-      "password": "vbf",
-      "address": "Romm no 311 talav faliya",
-      "city": "DAMAN",
-      "state": "sds",
-      "pincode": "396210",
-      "check": true,
-      "id": 8
     }
   ]
 }

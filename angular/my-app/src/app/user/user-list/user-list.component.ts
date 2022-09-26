@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { users } from 'src/app/model/user.model';
-import { UserService } from 'src/app/service/user.service';
+import { users } from 'src/app/user/model/user.model';
+import { UserService } from 'src/app/user/service/user.service';
 
 @Component({
   selector: 'app-user-list',
@@ -21,7 +21,7 @@ export class UserListComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  // get user
   getuser(): void {
     this.userservice.getuser().subscribe((result: users[]) => {
       this.users = result
@@ -32,7 +32,7 @@ export class UserListComponent implements OnInit {
   // delete user data in json server
   public onDelete(id: any) {
     this.userservice.deleteUser(id).subscribe((result) => {
-      debugger
+      // debugger
       this.getuser();
     })
 
