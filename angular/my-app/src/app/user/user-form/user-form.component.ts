@@ -4,7 +4,6 @@ import { ActivatedRoute } from '@angular/router';
 import { users } from 'src/app/user/model/user.model';
 import { UserService } from 'src/app/user/service/user.service';
 
-
 @Component({
   selector: 'app-user-form',
   templateUrl: './user-form.component.html',
@@ -37,7 +36,10 @@ export class UserFormComponent implements OnInit {
     this.users=[]
     this.activatedRoute.params.subscribe((res:any)=>{
       this.id=res.id
-      this.getUserById();
+      if(this.id){
+        this.getUserById();
+      }
+
     })
    }
    get user(): { [key: string]: AbstractControl } {
@@ -55,6 +57,7 @@ export class UserFormComponent implements OnInit {
 
       })
     }
+
     //  submit data in
   onSubmit():void{
     this.submitted = true;
@@ -70,7 +73,6 @@ export class UserFormComponent implements OnInit {
          //  console.log(this.res);
           this.getuserDetails();
            })
-
       }
 
     }

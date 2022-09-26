@@ -22,7 +22,7 @@ export class EmployeeFormComponent implements OnInit {
     private employeeservices:EmployeeserviceService,
     private route:Router,
     private activaterouter:ActivatedRoute
-  ) { 
+  ) {
     this.issubmited=false;
      this.empoyeeform=this.FormBuilder.group({
       firstname:['',[Validators.required,Validators.minLength(3)]],
@@ -35,13 +35,16 @@ export class EmployeeFormComponent implements OnInit {
       pincode:['',[Validators.required]],
      });
 
-    
+
        //  get using routing to get id
        this.id=this.activaterouter.snapshot.params['id'];
 
    this.activaterouter.params.subscribe((res)=>{
-    this.employeeid=res;
-    this.getUserById();
+    this.employeeid=res['id'];
+    if(this.employeeid){
+      this.getUserById();
+    }
+
    })
 
   }
@@ -51,38 +54,39 @@ export class EmployeeFormComponent implements OnInit {
   ngOnInit(): void {
     this.title="Add Employee";
     this.title=this.id?'Edit Employee':'Add Employee';
-   
-
   }
- 
-
-
 // add employee function
    onsubmited(){
     this.issubmited=true;
     if(this.empoyeeform.valid){
+
+      if(this.employeeid){
+        this.editesubmited();
+      }else{
         this.employeeservices.addEmployee(this.empoyeeform.value).subscribe((Response)=>{
-          this.route.navigate(['employee/emloyeeList']); 
+          this.route.navigate(['employee/emloyeeList']);
       });
-    
+
+      }
+
     }
-   
   }
   reset(){
     this.empoyeeform.reset();
   }
-
   editesubmited(){
     if(this.empoyeeform.valid){
       if(this.employeeid){
-        this.employeeservices.editeEmployeee(this.empoyeeform.value,Number(this.id)).subscribe((Response)=>{
+        this.employeeservices.editeEmployeee(this.empoyeeform.value,Number(this.employeeid)).subscribe((Response)=>{
           this.route.navigate(['employee/emloyeeList']);
         })
       }
     }
   }
+
+
   getUserById(){
-    this.employeeservices.getEmployeeId(Number(this.id)).subscribe((Response:users)=>{
+    this.employeeservices.getEmployeeId(Number(this.employeeid)).subscribe((Response)=>{
            this.empoyeeform.patchValue(Response)
           // console.log(Response)
     })

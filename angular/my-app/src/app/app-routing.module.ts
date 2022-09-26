@@ -28,6 +28,7 @@ const routes: Routes = [
   { path: 'user', loadChildren: () => import('./user/user.module').then(m => m.UserModule) },
   
   { path: 'employee', loadChildren: () => import('./employee/employee.module').then(m => m.EmployeeModule) },
+  { path: 'dynamicomponet', loadChildren: () => import('./dynamicomponent/dynamicomponent.module').then(m => m.DynamicomponentModule) },
 
   { path:'**',component:PageNotFoundComponent}
 

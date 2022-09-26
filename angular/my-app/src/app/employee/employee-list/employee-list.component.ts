@@ -15,7 +15,7 @@ export class EmployeeListComponent implements OnInit {
   constructor(
     private route:Router,
     private employeeservices:EmployeeserviceService
-  ) { 
+  ) {
     this.editdata=new EventEmitter();
   }
 

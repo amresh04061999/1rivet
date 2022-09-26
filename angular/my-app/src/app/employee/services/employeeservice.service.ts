@@ -10,7 +10,7 @@ export class EmployeeserviceService {
   constructor(
     private http:HttpClient
 
-  ) { 
+  ) {
 
     this.url='http://localhost:3000/'
   }
