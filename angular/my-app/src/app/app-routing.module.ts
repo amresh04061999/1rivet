@@ -29,6 +29,7 @@ const routes: Routes = [
   
   { path: 'employee', loadChildren: () => import('./employee/employee.module').then(m => m.EmployeeModule) },
   { path: 'dynamicomponet', loadChildren: () => import('./dynamicomponent/dynamicomponent.module').then(m => m.DynamicomponentModule) },
+  { path: 'rxjs', loadChildren: () => import('./rxjs/rxjs.module').then(m => m.RxjsModule) },
 
   { path:'**',component:PageNotFoundComponent}
 

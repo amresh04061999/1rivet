@@ -1,4 +1,4 @@
-<ul>
+<!-- <ul>
   <li (click)="Createcomponent(productName.mobile)">mobile</li>
   <li (click)="Createcomponent(productName.laptop)">laptop</li>
   <li (click)="Createcomponent(productName.watch)">watch</li>
@@ -7,4 +7,7 @@
 <div class="display">
 
   <ng-container  #container></ng-container>
-</div>
+</div> -->
+<button (click)="add()">Dynamically Add Component</button>
+<!-- insert the dynamic components -->
+<ng-container #container></ng-container >

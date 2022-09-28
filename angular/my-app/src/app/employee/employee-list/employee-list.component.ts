@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
+// import { Observable } from 'rxjs';
 import { employee } from '../model/employee.model';
 import { EmployeeserviceService } from '../services/employeeservice.service';
 
@@ -9,6 +10,7 @@ import { EmployeeserviceService } from '../services/employeeservice.service';
   styleUrls: ['./employee-list.component.scss']
 })
 export class EmployeeListComponent implements OnInit {
+    // public Employeelist$:Observable<any>
     public Employeelist:any
 
     @Output() editdata= new EventEmitter();
@@ -17,6 +19,8 @@ export class EmployeeListComponent implements OnInit {
     private employeeservices:EmployeeserviceService
   ) {
     this.editdata=new EventEmitter();
+
+    // this.Employeelist$=this.employeeservices.getEmploye()
   }
 
   ngOnInit(): void {
@@ -24,9 +28,10 @@ export class EmployeeListComponent implements OnInit {
   }
 
   getEmployeeList(){
-    this.employeeservices.getEmploye().subscribe((employee:employee[])=>{
+    this.employeeservices.getEmploye().subscribe((employee)=>{
       this.Employeelist=employee
     })
+  //  this.Employeelist$=this.employeeservices.getEmploye()
   }
   //  nagivate router fuction
   emppyeeform(){
@@ -48,5 +53,8 @@ export class EmployeeListComponent implements OnInit {
     this.route.navigate(['home'],{ queryParams:item })
 
   }
+
+
+
 
 }
