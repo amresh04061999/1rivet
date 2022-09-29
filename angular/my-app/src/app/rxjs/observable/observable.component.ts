@@ -7,13 +7,13 @@ import { DesignUtilityServicesService } from '../design-utility-services.service
   templateUrl: './observable.component.html',
   styleUrls: ['./observable.component.scss']
 })
-export class ObservableComponent implements OnInit {
- 
+export class ObservableComponent implements OnInit{
+
   public status:any
   public sub:Subscription
   constructor(
     private  services:DesignUtilityServicesService
-   
+
   ) {
 
 this.sub= new Subscription()
@@ -22,9 +22,9 @@ this.sub= new Subscription()
 
 
   ngOnInit(): void {
-                 
 
-        // observable example 1 manual 
+
+        // observable example 1 manual
         const custtom1$= new Observable(observer=>{
           setTimeout(() => {
             observer.next('java')
@@ -34,27 +34,41 @@ this.sub= new Subscription()
           }, 2000);
           setTimeout(() => {
             observer.next('angular')
-          
+            observer.complete()
+            // this.status='completed'
+
           }, 3000);
           setTimeout(() => {
             observer.next('javascript');
-            //  observer.error('limit exceed')
+             observer.error('limit exceed')
             //  this.status='error'
           }, 4000);
           setTimeout(() => {
             observer.next('jquery')
-            observer.complete() 
-            // this.status='completed'
+
             // compelete  its only print 3 data
           }, 5000);
-           
-           
+          setTimeout(() => {
+            observer.next('jquery')
+
+            // compelete  its only print 3 data
+          }, 5000);
+          setTimeout(() => {
+            observer.next('jquery')
+
+            // compelete  its only print 3 data
+          }, 5000);
+           setTimeout(() => {
+            observer.next('jquery')
+
+            // compelete  its only print 3 data
+          }, 5000);
 
         })
 
        const person1= custtom1$.subscribe(Response=>{
           // console.log(Response)
-          this.services.print(Response,'elcontainer')
+          this.services.print(Response,'elcontainer1')
         },
         (error)=>{
           this.status='error'
@@ -63,7 +77,7 @@ this.sub= new Subscription()
           ()=>{
             this.status='completed'
           }
-        
+
         )
 
     // Subscriber(data, error  completion)
@@ -71,9 +85,8 @@ this.sub= new Subscription()
  // observable example 1  custome interval
 const custtom2$= new Observable(sub =>{
   setInterval(()=>{
-           sub.next('hello');   
+           sub.next('hello');
   },100)
-
 })
 
 const persone=custtom2$.subscribe(Response =>{
