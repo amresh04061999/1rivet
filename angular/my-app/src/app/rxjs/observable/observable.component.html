@@ -1,1 +1,39 @@
-<p>observable works!</p>
+<div class="my-3 p-5">
+<h2>Custome Observable</h2>
+<br>
+<div class="row">
+    <div class="col-md-6">
+          <strong> example 01 (manual)</strong>
+          <hr>
+          <ul [ngClass]="status == 'completed' ? 'completed': status =='error'?'error':''" class="list" id="elcontainer">
+           
+          </ul>
+    </div>
+    <div class="col-md-6">
+        <strong> example 02 (custome interval Observable)</strong>
+        <hr>
+        <ul class="list ">
+          <li>angular</li>
+          <li>typescript</li>
+          <li>java</li>
+        </ul>
+  </div>
+ 
+</div>
+<div class="row"></div>
+<div class="row">
+    <div class="col-md-12"> 
+        <strong> example 03 (Randome Name)</strong>
+        <hr>
+        <p class="bg-light py-2 px-3 border rounded"> 
+            <strong>Randome Name</strong> 'amresh','shakher','sharma','ramesh','mahesh','rahul'
+        </p>
+        <hr>
+        <p>current name : <strong class="text-success"> amresh</strong></p>
+        <span class="badge badge-success bg-success">Success</span>
+    
+         
+    </div>
+</div>
+
+</div>

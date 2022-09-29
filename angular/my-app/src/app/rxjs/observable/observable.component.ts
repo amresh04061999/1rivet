@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { observable, Observable } from 'rxjs';
+import { observable, Observable, Subscriber, Subscription } from 'rxjs';
+import { DesignUtilityServicesService } from '../design-utility-services.service';
 
 @Component({
   selector: 'app-observable',
@@ -7,35 +8,94 @@ import { observable, Observable } from 'rxjs';
   styleUrls: ['./observable.component.scss']
 })
 export class ObservableComponent implements OnInit {
-  // public observable$:Observable<any>;
-  observable$:any
-  obse1:any
-  person:any
-  constructor() {
+ 
+  public status:any
+  public sub:Subscription
+  constructor(
+    private  services:DesignUtilityServicesService
+   
+  ) {
 
-
+this.sub= new Subscription()
   }
 
 
 
   ngOnInit(): void {
+                 
 
-    this.observable$=new Observable((obse1)=>{
+        // observable example 1 manual 
+        const custtom1$= new Observable(observer=>{
+          setTimeout(() => {
+            observer.next('java')
+          }, 1000);
+          setTimeout(() => {
+            observer.next('json')
+          }, 2000);
+          setTimeout(() => {
+            observer.next('angular')
+          
+          }, 3000);
+          setTimeout(() => {
+            observer.next('javascript');
+            //  observer.error('limit exceed')
+            //  this.status='error'
+          }, 4000);
+          setTimeout(() => {
+            observer.next('jquery')
+            observer.complete() 
+            // this.status='completed'
+            // compelete  its only print 3 data
+          }, 5000);
+           
+           
 
-              this.obse1.next(10);
-              this.obse1.next(550);
-              this.obse1.next(15);
-              this.obse1.next(10);
-              this.obse1.next(18);
-              if(3>5){
-                obse1.error('error')
-              }
-              else{
-                obse1.complete()
+        })
 
-              }
-            })
-     }
+       const person1= custtom1$.subscribe(Response=>{
+          // console.log(Response)
+          this.services.print(Response,'elcontainer')
+        },
+        (error)=>{
+          this.status='error'
+
+        },
+          ()=>{
+            this.status='completed'
+          }
+        
+        )
+
+    // Subscriber(data, error  completion)
+
+ // observable example 1  custome interval
+const custtom2$= new Observable(sub =>{
+  setInterval(()=>{
+           sub.next('hello');   
+  },100)
+
+})
+
+const persone=custtom2$.subscribe(Response =>{
+  console.log(Response)
+})
+
+
+    // this.observable$=new Observable((obse1)=>{
+    //           this.obse1.next(10);
+    //           this.obse1.next(550);
+    //           this.obse1.next(15);
+    //           this.obse1.next(10);
+    //           this.obse1.next(18);
+    //           if(3>5){
+    //             obse1.error('error')
+    //           }
+    //           else{
+    //             obse1.complete()
+
+    //           }
+    //         })
+    //  }
 
 
     // prommise
@@ -89,3 +149,8 @@ export class ObservableComponent implements OnInit {
 
 
 
+  }
+
+function ngOnDestroy() {
+  throw new Error('Function not implemented.');
+}
