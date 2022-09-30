@@ -7,14 +7,14 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class EmployeelistComponent implements OnInit {
   @Output() editdata= new EventEmitter();
-  customerid:number
+  // customerid:number
   @Input() details:any=[];
    x: any;
   constructor(
     private router:Router,
     private activaterouter:ActivatedRoute
   ) {
-    this.customerid=this.activaterouter.snapshot.params['customerid'];
+    // this.customerid=this.activaterouter.snapshot.params['customerid'];
     this.editdata=new EventEmitter();
   }
 

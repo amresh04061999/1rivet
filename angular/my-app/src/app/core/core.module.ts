@@ -4,6 +4,7 @@ import { HeaderComponent } from './componet/header/header.component';
 import { NavigationComponent } from './componet/navigation/navigation.component';
 import { FooterComponent } from './componet/footer/footer.component';
 import { AppRoutingModule } from '../app-routing.module';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -17,7 +18,7 @@ import { AppRoutingModule } from '../app-routing.module';
   ],
   imports: [
     CommonModule,
-    AppRoutingModule
+    RouterModule
   ],
 exports:[
 HeaderComponent,

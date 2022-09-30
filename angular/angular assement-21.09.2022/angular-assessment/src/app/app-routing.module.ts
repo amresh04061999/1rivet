@@ -22,9 +22,8 @@ const routes: Routes = [
 
      { path: 'epmpoyee', loadChildren: () => import('./empoloyee/empoloyee.module').then(m => m.EmpoloyeeModule) },
 
-     {
-      path:'**',component:PageNotFoundComponent
-     }
+
+     { path: '**', redirectTo: '/home', pathMatch: 'full' },
 
 
 ];

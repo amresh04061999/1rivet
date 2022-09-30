@@ -26,9 +26,7 @@ import { EmployeedetailsComponent } from './component/employeedetails/employeede
 
   ],
   exports:[
-    EmployeeFormComponent,
-    EmployeelistComponent,
-    EmployeedetailsComponent
+
   ]
 
 })
