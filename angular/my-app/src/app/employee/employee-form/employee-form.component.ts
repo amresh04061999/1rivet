@@ -64,7 +64,7 @@ export class EmployeeFormComponent implements OnInit {
         this.editesubmited();
       }else{
         this.employeeservices.addEmployee(this.empoyeeform.value).subscribe((Response)=>{
-          this.route.navigate(['employee/emloyeeList']);
+          this.route.navigate(['emloyeeList'],{relativeTo:this.activaterouter.parent});
       });
 
       }

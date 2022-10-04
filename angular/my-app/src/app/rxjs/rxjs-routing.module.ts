@@ -6,6 +6,7 @@ import { FormEventComponent } from './form-event/form-event.component';
 import { IntervalComponent } from './interval/interval.component';
 import { ObservableComponent } from './observable/observable.component';
 import { FromComponent } from './operator-type/from/from.component';
+import { MapComponent } from './operator-type/map/map.component';
 import { OfComponent } from './operator-type/of/of.component';
 import { TimerComponent } from './operator-type/timer/timer.component';
 import { ToarrayComponent } from './operator-type/toarray/toarray.component';
@@ -18,7 +19,7 @@ import { SubjectComponent } from './subject/subject.component';
 
 const routes: Routes = [{ path: '', component: RxjsComponent,
 children:[
-          
+
   {
    path:'',
    redirectTo:'rxjs-main',
@@ -64,6 +65,9 @@ children:[
 },
 {
   path:'toarray',component:ToarrayComponent
+},
+{
+  path:'map',component:MapComponent
 },
 ]
 

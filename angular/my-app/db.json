@@ -35,17 +35,6 @@
   ],
   "employee": [
     {
-      "firstname": "amreshhiiiiiiiiiiiii",
-      "lastname": "singh",
-      "phoneno": "1234567898",
-      "email": "amresh1098@gmail.com",
-      "address": "Romm no 311 talav faliya",
-      "city": "DAMAN",
-      "state": "reeeee",
-      "pincode": "396210",
-      "id": 4
-    },
-    {
       "firstname": "amresh",
       "lastname": "prasad",
       "phoneno": "1234567898",
@@ -55,6 +44,28 @@
       "state": "a",
       "pincode": "396210",
       "id": 5
+    },
+    {
+      "firstname": "fdgfgfgfg",
+      "lastname": "fgfgfgfg",
+      "phoneno": "1234567898",
+      "email": "amresh1098@gmail.com",
+      "address": "Romm no 311 talav faliya",
+      "city": "DAMAN",
+      "state": "fdgf",
+      "pincode": "396210",
+      "id": 6
+    },
+    {
+      "firstname": "fdgfgfgfg",
+      "lastname": "ssss",
+      "phoneno": "1234567898",
+      "email": "amresh1098@gmail.com",
+      "address": "Romm no 311 talav faliya",
+      "city": "DAMAN",
+      "state": "reeeee",
+      "pincode": "396210",
+      "id": 7
     }
   ]
 }

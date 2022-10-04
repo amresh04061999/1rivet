@@ -145,7 +145,7 @@ export class ObservableComponent implements OnInit, OnDestroy{
 
 }
 
-// observable stream create 
+// observable stream create
 // -- user input(button click event)
 //-- http Request
 //-- array
@@ -155,7 +155,7 @@ export class ObservableComponent implements OnInit, OnDestroy{
 // Observable handel(subscribe)
 //--next(data);
 //-- error
-//-- completion 
+//-- completion
 
 
 

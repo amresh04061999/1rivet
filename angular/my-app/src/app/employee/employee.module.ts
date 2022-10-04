@@ -22,7 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
     EmployeeRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-  
+
   ],
   providers: [
    EmployeeserviceService

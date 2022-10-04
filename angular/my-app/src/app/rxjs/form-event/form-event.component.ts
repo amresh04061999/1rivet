@@ -12,13 +12,13 @@ export class FormEventComponent implements OnInit,AfterViewInit {
   constructor(
     private design:DesignUtilityServicesService
   ) { }
- 
+
    @ViewChild('addbtn')addbtn!: ElementRef;
-   
+
   ngOnInit(): void {
-   
+
   }
-// create streem of data using formEvent 
+// create streem of data using formEvent
   ngAfterViewInit(): void {
     let count= 1;
    fromEvent(this.addbtn.nativeElement,'click').subscribe(res=>{

@@ -17,7 +17,6 @@ export class TimerComponent implements OnInit {
     this.videoUnsubscription=new Subscription()
    }
   ngOnInit(): void {
-
     //  using timer or interval to create observable stream
     // timer pass 2 argument timer(delay,interval)
     const broadCastVideo=timer(5000,3000);
@@ -27,8 +26,6 @@ export class TimerComponent implements OnInit {
     if(res >=7){
       this.videoUnsubscription.unsubscribe();
     }
-    
-
     })
 
   }
