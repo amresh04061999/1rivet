@@ -5,21 +5,21 @@ import { DesignUtilityServicesService } from '../design-utility-services.service
 @Component({
   selector: 'app-replay-subject',
   templateUrl: './replay-subject.component.html',
-  styleUrls: ['./replay-subject.component.scss'],
+  styleUrls: ['./replay-subject.component.scss']
 })
 export class ReplaySubjectComponent implements OnInit {
-  public subject = new ReplaySubject(3);
-  public status: any;
-  public status2: any;
-  public person1: any;
-  public person2: any;
 
-  constructor(private design: DesignUtilityServicesService) {}
+  public status:any;
+  public status2:any;
+  public person1:any;
+  public persone2:any;
+    public subject =new ReplaySubject(3)  
+  constructor( private desing:DesignUtilityServicesService) { }
 
   ngOnInit(): void {
-    this.person1 = this.subject.subscribe({
-      next: (message) => {
-        this.design.print(message, 'elcontainer');
+    this.person1=this.subject.subscribe({
+      next:(value)=>{ 
+         this.desing.print(value,'elcontainer')
       },
       error: () => {
         this.status = 'error';
@@ -27,19 +27,15 @@ export class ReplaySubjectComponent implements OnInit {
       complete: () => {
         this.status = 'completed';
       },
-    });
+    })
 
-    this.subject.next(1)
-    this.subject.next(2)
-    this.subject.complete()
-    this.subject.next(3)
-
-    this.subject.next(4)
-    this.subject.next(5)
-    // this.subject.complete()
-    this.person2 = this.subject.subscribe({
-      next: (message) => {
-        this.design.print(message, 'elcontainer1');
+    this.subject.next(1);
+    this.subject.next(2);
+    this.subject.next(3);
+    this.subject.next(4);
+    this.person1=this.subject.subscribe({
+      next:(value)=>{ 
+         this.desing.print(value,'elcontainer1')
       },
       error: () => {
         this.status2 = 'error';
@@ -47,8 +43,8 @@ export class ReplaySubjectComponent implements OnInit {
       complete: () => {
         this.status2 = 'completed';
       },
-    });
-    this.subject.next(6)
-    this.subject.next(7)
+    })
   }
+  
+
 }

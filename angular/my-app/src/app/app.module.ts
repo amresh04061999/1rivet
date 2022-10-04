@@ -8,13 +8,15 @@ import { AboutModule } from './about/about.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import{ HttpClientModule} from'@angular/common/http';
 import { HomeComponent } from './home/home.component';
+
 // import { UserService } from './service/user.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     PageNotFoundComponent,
-    HomeComponent
+    HomeComponent,
+   
 
   ],
   imports: [

@@ -1,4 +1,5 @@
 <div class="my-3 p-5">
+    <button type="button" class="btn btn-primary mb-2" routerLink="../">Back...</button>
 <h2>Custome Observable</h2>
 <br>
 <div class="row">
@@ -19,7 +20,7 @@
 
 </div>
 <div class="row"></div>
-<!-- <div class="row">
+<div class="row">
     <div class="col-md-12">
         <strong> example 03 (Randome Name)</strong>
         <hr>
@@ -27,11 +28,11 @@
             <strong>Randome Name</strong> 'amresh','shakher','sharma','ramesh','mahesh','rahul'
         </p>
         <hr>
-        <p>current name : <strong class="text-success"> amresh</strong></p>
-        <span class="badge badge-success bg-success">Success</span>
-
-
+        <p>current name : <strong > {{name}}</strong></p>
+        <span class="badge bg-success badge-success" [ngClass]="namestatus == 'completed' ? ' badge-success': 
+        namestatus =='error'?' badge-danger':'badge-primary'">
+        {{"namestatus == 'completed' ? ' success': namestatus =='error'?' fail':'running'"}}</span>
     </div>
-</div> -->
+</div>
 
 </div>

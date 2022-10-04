@@ -1,21 +1,21 @@
 <div class="my-3 p-5">
-  <h2>Replay-subject</h2>
-  <br>
-  <div class="row">
-      <div class="col-md-6">
-            <strong> 1-Subscriber</strong>
-            <hr>
-            <ul [ngClass]="status == 'completed' ? 'completed': status =='error'?'error':''" class="list" id="elcontainer">
-
-            </ul>
-      </div>
-      <div class="col-md-6" >
-          <strong> 2-Subscriber</strong>
+    <button type="button" class="btn btn-primary mb-2" routerLink="../">Back...</button>
+<h2>Replay-subject</h2>
+<br>
+<div class="row">
+    <div class="col-md-6">
+          <strong> 1-Subscriber</strong>
           <hr>
-          <ul class="list " id="elcontainer1" [ngClass]="status2 == 'completed' ? 'completed': status2 =='error'?'error':''">
+          <ul [ngClass]="status == 'completed' ? 'completed': status =='error'?'error':''" class="list" id="elcontainer">
 
           </ul>
     </div>
+    <div class="col-md-6" >
+        <strong> 2-Subscriber</strong>
+        <hr>
+        <ul class="list " id="elcontainer1" [ngClass]="status2 == 'completed' ? 'completed': status2 =='error'?'error':''">
 
+        </ul>
   </div>
 
+</div>

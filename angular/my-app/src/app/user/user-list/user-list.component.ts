@@ -15,12 +15,11 @@ export class UserListComponent implements OnInit {
     private userservice: UserService,
     private route:Router
   ) {
-    this.users = [];
-
+    this.users = [ ];
   }
-
   ngOnInit(): void {
   }
+
   // get user
   getuser(): void {
     this.userservice.getuser().subscribe((result: users[]) => {
@@ -29,14 +28,15 @@ export class UserListComponent implements OnInit {
 
     })
   }
+  
   // delete user data in json server
   public onDelete(id: any) {
     this.userservice.deleteUser(id).subscribe((result) => {
       // debugger
       this.getuser();
     })
-
   }
+
   // Edite data in user in json
   onEdite(id: any) {
         this.route.navigate(['user/edit',+ id])

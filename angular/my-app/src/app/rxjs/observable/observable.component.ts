@@ -10,8 +10,10 @@ import { DesignUtilityServicesService } from '../design-utility-services.service
 export class ObservableComponent implements OnInit, OnDestroy{
   public status: any;
   public status2: any;
+  public namestatus:any;
   public unsub: Subscription;
   public persone:any;
+  public name:any
   constructor(private services: DesignUtilityServicesService) {
     this.unsub = new Subscription();
   }
@@ -83,9 +85,7 @@ export class ObservableComponent implements OnInit, OnDestroy{
 
     // Subscriber(data, error  completion)
 
-
-
-    // observable example 1  custome interval
+    // observable example 3  custome interval
    const arraydata=['java','javascript','angular','']
     const custtom2$ = new Observable((sub) => {
      let count =0;
@@ -109,12 +109,56 @@ export class ObservableComponent implements OnInit, OnDestroy{
     }
     );
 
+  // example 3 (random names)
+  const array1=['amresh','shakher','sharma','ramesh','mahesh','rahul']
+    const custtom3$ = new Observable((sub) => {
+     let count =0;
+      setInterval(() => {
+        sub.next(array1[count]);
+        if(count>=3){
+          sub.error();
+        }
+        if(count>=5){
+          sub.complete();
+        }
+        count ++;
+      }, 1000);
 
+    });
+
+    custtom3$.subscribe({
+      next:(message)=>{
+      this.name=message
+      },
+      error:()=>{
+        this.namestatus='error';
+        console.log('error')
+      },
+      complete:()=>{
+        this.namestatus='completed';
+      }
+
+    })
   }
   ngOnDestroy(): void {
    this.unsub.unsubscribe()
 
-
 }
+
+// observable stream create 
+// -- user input(button click event)
+//-- http Request
+//-- array
+//--object
+//etc
+
+// Observable handel(subscribe)
+//--next(data);
+//-- error
+//-- completion 
+
+
+
+
 }
 
