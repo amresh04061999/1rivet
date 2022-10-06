@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+import { NotificationService } from 'src/app/notification/notification.service';
 import { employee } from '../model/employee.model';
 import { EmployeeServiceService } from '../services/employee-service.service';
 
@@ -12,15 +14,17 @@ import { EmployeeServiceService } from '../services/employee-service.service';
 export class EmployeeformComponent implements OnInit {
 
   public employeeForm: FormGroup;
-  public issubmited: false;
+  public issubmited=false;
   public employeelist: any
   public id: any
   constructor(private formbuilder: FormBuilder,
     private employeesevices: EmployeeServiceService,
-    private router: ActivatedRoute
+    private router: ActivatedRoute,
+    private route:Router,
+    private toastrService: ToastrService
 
   ) {
-    this.issubmited = false;
+    // this.issubmited = false;
     // form builder
     this.employeeForm = this.formbuilder.group({
       firstname: ['', [Validators.required]],
@@ -47,21 +51,35 @@ export class EmployeeformComponent implements OnInit {
 
   // add function
   public save() {
-    if (this.employeeForm.valid) {
-      if (this.id) {
+    this.issubmited=true
+      if (this.employeeForm.valid) {
+      
+          if (this.id) 
+          {
         this.employeesevices.editemployee(this.employeeForm.value, this.id).subscribe(Response => {
           this.getEmployee();
+          this.employeeForm.reset();
+          this.route.navigate(['employee/form'])
+          this.toastrService.success('edite data sucessfull','update')
         })
       } else {
         this.employeesevices.addEmployee(this.employeeForm.value).subscribe((Response: employee[]) => {
+          this.toastrService.success('add data sucessfull','add')
           this.getEmployee()
+         
         })
       }
 
-    } else {
+    } 
+    
+    else {
       console.log('form is invalid');
-
     }
+  
+  }
+
+  public reset(){
+    this.employeeForm.reset()
 
   }
   // getdata
