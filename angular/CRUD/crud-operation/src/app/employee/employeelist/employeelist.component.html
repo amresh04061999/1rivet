@@ -12,10 +12,18 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        
+      <tr *ngFor="let list of employee">
+        <td>{{list.id}}</td>
+        <td>{{list.firstname}}</td>
+        <td>{{list.lastname}}</td>
+        <td>{{list.phoneno}}</td>
+        <td>{{list.email}}</td>
+        <td> <button type="button" (click)="editeEmploye(list)" >Edit</button>
+          <button type="button" (click)="onDelete(list.id)">Delete</button>
+          <button type="button" (click)=" employedetails(list)">Details</button></td>
+
       </tr>
-     
+
     </tbody>
   </table>
 </div>

@@ -7,6 +7,8 @@ import { EmployeeformComponent } from './employeeform/employeeform.component';
 import { EmployeelistComponent } from './employeelist/employeelist.component';
 import { DetailsEmployeeComponent } from './details-employee/details-employee.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule} from '@angular/common/http';
+import { EmployeeServiceService } from './services/employee-service.service';
 
 
 @NgModule({
@@ -15,12 +17,17 @@ import { ReactiveFormsModule } from '@angular/forms';
     EmployeeformComponent,
     EmployeelistComponent,
     DetailsEmployeeComponent,
-   
+
   ],
   imports: [
     CommonModule,
     EmployeeRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
+  ],
+  providers:[
+    EmployeeServiceService
   ]
+
 })
 export class EmployeeModule { }

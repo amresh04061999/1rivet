@@ -41,7 +41,6 @@ export class EmployeeserviceService {
     return this.http.delete(baseURL)
 
    }
-
     // edite services
     editeEmployeee(employee:employee,id:number):Observable<any>{
       const baseURL=this.url + 'employee/'+ id;

@@ -1,27 +1,45 @@
 <form [formGroup]="employeeForm" (ngSubmit)="save()">
-    <h2 class="ms-5 mt-4">EMPLOYEE FORM</h2>
-    <div class="form-row d-flex mx-5">
-      <div class="form-group col-md-6 ">
-        <label for="firstName">FirstName</label>
-        <input type="text" class="form-control" id="firstName" placeholder="Enter firstName" formControlName="firstname">
-        <!-- <div *ngIf="employeeForm.controls[firstname].invalid && (issubmited || validator[firstname].touched || validator[firstname].dirty)"></div> -->
-      </div>
-      <div class="form-group col-md-6 ms-3">
-        <label for="Lastname">LastName</label>
-        <input type="text" class="form-control" id="Lastname" placeholder="Enter lastName" formControlName="lastname">
-      </div>
-    </div>
-    <div class="form-row d-flex mx-5">
-      <div class="form-group col-md-6">
-        <label for="phoneno">Phone No</label>
-        <input type="number" class="form-control" id="phoneno" placeholder="Enter Phone No" formControlName="phoneno">
-      </div>
-      <div class="form-group col-md-6 ms-3">
-        <label for="email">Email</label>
-        <input type="email" class="form-control" id="email" placeholder="Enter Email" formControlName="email">
+  <h2 class="ms-5 mt-4">EMPLOYEE FORM</h2>
+  <div class="form-row d-flex mx-5">
+    <div class="form-group col-md-6">
+      <label for="firstName">FirstName</label>
+      <input type="text" class="form-control" id="firstName" placeholder="Enter firstName"
+        formControlName="firstname" />
+      <div
+        *ngIf="validator['firstname'].invalid && (issubmited || validator['firstname'].touched || validator['firstname'].dirty)">
+        <div *ngIf=" validator['firstname'].errors?.['required']" class="text-danger">
+          FirstName Is required
+        </div>
       </div>
     </div>
-    <button type="submit" class="btn btn-primary ms-5 mt-2">Save</button>
-  </form>
+    <div class="form-group col-md-6 ms-3">
+      <label for="Lastname">LastName</label>
+      <input type="text" class="form-control" id="Lastname" placeholder="Enter lastName" formControlName="lastname" />
+      <div
+        *ngIf="validator['lastname'].invalid && (issubmited || validator['lastname'].touched || validator['lastname'].dirty)">
+        <div *ngIf="validator['lastname'].errors?.['required'] " class="text-danger"> LastName is required</div>
 
-<app-employeelist></app-employeelist>
+      </div>
+    </div>
+  </div>
+  <div class=" form-row d-flex mx-5">
+    <div class="form-group col-md-6">
+      <label for="phoneno">Phone No</label>
+      <input type="number" class="form-control" id="phoneno" placeholder="Enter Phone No" formControlName="phoneno" />
+      <div
+        *ngIf="validator['phoneno'].invalid && (issubmited || validator['phoneno'].touched || validator['phoneno'].dirty)">
+        <div *ngIf="validator['phoneno'].errors?.['required']" class="text-danger"> Phone No is Required</div>
+      </div>
+    </div>
+    <div class="form-group col-md-6 ms-3">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter Email" formControlName="email" />
+      <div *ngIf="validator['email'].invalid &&(issubmited || validator['email'].touched || validator['email'].dirty)">
+        <div *ngIf="validator['email'].errors?.['required']" class="text-danger"> Email is Required</div>
+      </div>
+    </div>
+  </div>
+  <button type=" submit" class="btn btn-primary ms-5 mt-2">Save</button>
+</form>
+
+<app-employeelist [employee]="employeelist"></app-employeelist>
