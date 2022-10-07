@@ -7,13 +7,10 @@ import { EmployeeformComponent } from './employeeform/employeeform.component';
 import { EmployeelistComponent } from './employeelist/employeelist.component';
 import { DetailsEmployeeComponent } from './details-employee/details-employee.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { EmployeeServiceService } from './services/employee-service.service';
 import { ToastrModule } from 'ngx-toastr';
-import { NotificationService } from '../notification/notification.service';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-
+import { NotificationService } from '../notification/notification.service'
 @NgModule({
   declarations: [
     EmployeeComponent,
@@ -27,14 +24,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     EmployeeRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    ToastrModule.forRoot({
-      timeOut: 15000, // 15 seconds
-      closeButton: true,
-      progressBar: true,
-    }),
-  
+
   ],
-  providers:[
+  providers: [
     EmployeeServiceService,
     NotificationService
   ]

@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { NotificationService } from 'src/app/notification/notification.service';
 import { employee } from '../model/employee.model';
 import { EmployeeServiceService } from '../services/employee-service.service';
 
@@ -9,13 +10,11 @@ import { EmployeeServiceService } from '../services/employee-service.service';
   styleUrls: ['./employeelist.component.scss']
 })
 export class EmployeelistComponent implements OnInit {
-
-
   @Input() employee: employee[]
   constructor(
-
     private employeeservices: EmployeeServiceService,
-    private router: Router
+    private router: Router,
+    private toaster: NotificationService
   ) {
     this.employee = []
   }
@@ -26,6 +25,7 @@ export class EmployeelistComponent implements OnInit {
   // Delete employee
   public onDelete(id: any) {
     this.employeeservices.employeeDelete(id).subscribe((Response) => {
+      this.toaster.showerror('Delete successfull delete', 'delete');
       this.getEmploye()
     })
   }

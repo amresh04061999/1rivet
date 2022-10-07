@@ -14,14 +14,14 @@ import { EmployeeServiceService } from '../services/employee-service.service';
 export class EmployeeformComponent implements OnInit {
 
   public employeeForm: FormGroup;
-  public issubmited=false;
+  public issubmited = false;
   public employeelist: any
   public id: any
   constructor(private formbuilder: FormBuilder,
     private employeesevices: EmployeeServiceService,
     private router: ActivatedRoute,
-    private route:Router,
-    private toastrService: ToastrService
+    private route: Router,
+    private toastrService: NotificationService
 
   ) {
     // this.issubmited = false;
@@ -34,15 +34,20 @@ export class EmployeeformComponent implements OnInit {
     })
     // get id
     this.router.params.subscribe(param => {
+      // debugger
       this.id = param['id'];
       if (this.id) {
         this.getemployebyid()
       }
     })
+
+    console.log('this is cons');
+
   }
 
   ngOnInit(): void {
     this.getEmployee()
+    console.log('this is init');
   }
   // function geter
   get validator(): { [key: string]: AbstractControl<any> } {
@@ -51,35 +56,36 @@ export class EmployeeformComponent implements OnInit {
 
   // add function
   public save() {
-    this.issubmited=true
-      if (this.employeeForm.valid) {
-      
-          if (this.id) 
-          {
+    this.issubmited = true
+    if (this.employeeForm.valid) {
+      if (this.id) {
         this.employeesevices.editemployee(this.employeeForm.value, this.id).subscribe(Response => {
           this.getEmployee();
           this.employeeForm.reset();
           this.route.navigate(['employee/form'])
-          this.toastrService.success('edite data sucessfull','update')
-        })
-      } else {
-        this.employeesevices.addEmployee(this.employeeForm.value).subscribe((Response: employee[]) => {
-          this.toastrService.success('add data sucessfull','add')
-          this.getEmployee()
-         
+          this.toastrService.showSuccess('edite data sucessfull', 'update')
         })
       }
+      else {
+        this.employeesevices.addEmployee(this.employeeForm.value).subscribe((Response: employee[]) => {
+          this.toastrService.showSuccess('add data sucessfull', 'add')
+          this.getEmployee();
+          this.employeeForm.reset()
+        })
+      }
+      this.issubmited = false
+    }
 
-    } 
-    
     else {
       console.log('form is invalid');
     }
-  
   }
 
-  public reset(){
-    this.employeeForm.reset()
+  public reset() {
+    if (this.employeeForm.valid) {
+      this.employeeForm.reset()
+
+    }
 
   }
   // getdata

@@ -2,17 +2,20 @@ import { Injectable } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 
 @Injectable(
-//   {
-//   providedIn: 'root'
-// }
+  //   {
+  //   providedIn: 'root'
+  // }
 )
 export class NotificationService {
 
   constructor(
-    private toastr:ToastrService
+    private toastr: ToastrService
   ) { }
 
-  showSuccess(message:string, title:string){
+  showSuccess(message: string, title: string) {
     this.toastr.success(message, title)
-}
+  }
+  showerror(message: string, title: string) {
+    this.toastr.error(message, title)
+  }
 }

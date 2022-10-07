@@ -28,8 +28,6 @@ import { ToastrModule } from 'ngx-toastr';
       closeButton: true,
       progressBar: true,
     }),
-    
-  
   ],
   // providers: [],
   bootstrap: [AppComponent]
