@@ -28,13 +28,12 @@
               "src/assets"
             ],
             "styles": [
-
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "node_modules/ngx-toastr/toastr.css",
               "src/styles.scss"
-
             ],
             "scripts": [
-             ]
+             "node_module/bootstrap/disk/js/bootstrap.boundle.js"]
           },
           "configurations": {
             "production": {
@@ -100,6 +99,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []

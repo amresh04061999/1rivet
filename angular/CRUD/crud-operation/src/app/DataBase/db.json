@@ -1,27 +1,6 @@
 {
   "employee": [
     {
-      "firstname": "amresh",
-      "lastname": "dd",
-      "phoneno": 1234567898,
-      "email": "amresh1098@gmail.com",
-      "id": 11
-    },
-    {
-      "firstname": "sss",
-      "lastname": "prasad",
-      "phoneno": 1234567898,
-      "email": "amresh1098@gmail.com",
-      "id": 12
-    },
-    {
-      "firstname": "shivamdvdfg",
-      "lastname": "dd",
-      "phoneno": 1234567898,
-      "email": "amresh1098@gmail.com",
-      "id": 13
-    },
-    {
       "firstname": "ssss",
       "lastname": "dd",
       "phoneno": 1234567898,

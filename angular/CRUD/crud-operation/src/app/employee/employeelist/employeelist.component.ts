@@ -7,39 +7,38 @@ import { EmployeeServiceService } from '../services/employee-service.service';
 @Component({
   selector: 'app-employeelist',
   templateUrl: './employeelist.component.html',
-  styleUrls: ['./employeelist.component.scss']
+  styleUrls: ['./employeelist.component.scss'],
 })
 export class EmployeelistComponent implements OnInit {
-  @Input() employee: employee[]
+  @Input() employee: employee[];
   constructor(
     private employeeservices: EmployeeServiceService,
     private router: Router,
     private toaster: NotificationService
   ) {
-    this.employee = []
+    this.employee = [];
   }
-
   ngOnInit(): void {
-    this.getEmploye()
+    this.getEmploye();
   }
   // Delete employee
   public onDelete(id: any) {
     this.employeeservices.employeeDelete(id).subscribe((Response) => {
-      this.toaster.showerror('Delete successfull delete', 'delete');
-      this.getEmploye()
-    })
+      this.toaster.showSuccess('Delete successfull delete', 'delete');
+      this.getEmploye();
+    });
   }
   public getEmploye() {
     this.employeeservices.getemployee().subscribe((Response) => {
-      this.employee = Response
-    })
+      this.employee = Response;
+    });
   }
   // edite employee
   public editeEmploye(emoloye: employee) {
-    this.router.navigate(['employee/edit', emoloye.id])
+    this.router.navigate(['employee/edit', emoloye.id]);
   }
   // show Details
   public employedetails(list: employee) {
-    this.router.navigate(['employee/detail', list.id])
+    this.router.navigate(['employee/detail', list.id]);
   }
 }

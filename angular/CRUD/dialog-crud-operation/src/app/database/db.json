@@ -1,0 +1,60 @@
+{
+  "user": [
+    {
+      "firstname": "azazaz",
+      "lastname": "azazaz",
+      "phoneno": "aa",
+      "email": "aaaz",
+      "password": "axx",
+      "id": 1
+    },
+    {
+      "firstname": "syxgsxxhs",
+      "lastname": "xbyax",
+      "phoneno": "344556787654567",
+      "email": "335",
+      "password": "wdww",
+      "id": 2
+    },
+    {
+      "firstname": "amresh",
+      "lastname": "rajsh",
+      "phoneno": "344556787654567",
+      "email": "amresh",
+      "password": "qsqsqs",
+      "id": 3
+    },
+    {
+      "firstname": "amresh",
+      "lastname": "rajsh",
+      "phoneno": "344556787654567",
+      "email": "amresh",
+      "password": "qsqsqs",
+      "id": 4
+    },
+    {
+      "firstname": "syxgsxxhs",
+      "lastname": "xbyax",
+      "phoneno": "344556787654567",
+      "email": "zazaz",
+      "password": "i456789",
+      "id": 5
+    },
+    {
+      "firstname": "xsss",
+      "lastname": "xs",
+      "phoneno": "d d d d",
+      "email": "cdcdc",
+      "password": " d d ",
+      "id": 6
+    },
+    {
+      "firstname": "",
+      "lastname": "xsxsx",
+      "phoneno": "sxs",
+      "email": "xsxsx",
+      "password": "deded",
+      "id": 7
+    }
+  ]
+}

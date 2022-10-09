@@ -1,0 +1,30 @@
+<button type="button" class="btn btn-primary ms-5" (click)="openDialog()">ADD USER</button>
+<button mat-button color="primary" (click)="openDialog()">Open dialog</button>
+<h4 class="ms-5 mt-4"> USERS LIST</h4>
+<div class="p-5">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">FirstName</th>
+                <th scope="col">LastName</th>
+                <th scope="col">Phone No</th>
+                <th scope="col">Email</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- <tr *ngFor="let list of employee">
+                <td>{{list.id}}</td>
+                <td>{{list.firstname}}</td>
+                <td>{{list.lastname}}</td>
+                <td>{{list.phoneno}}</td>
+                <td>{{list.email}}</td>
+                <td> <button type="button" class="btn btn-success me-2" (click)="editeEmploye(list)">Edit</button>
+                    <button type="button" class="btn btn-danger me-2" (click)="onDelete(list.id)">Delete</button>
+
+                </td>
+            </tr> -->
+        </tbody>
+    </table>
+</div>

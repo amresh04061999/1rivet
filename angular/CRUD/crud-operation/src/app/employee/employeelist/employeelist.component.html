@@ -1,6 +1,6 @@
 <h2 class="ms-5 mt-2"> EMPLOYEE LIST</h2>
 <div class="p-5">
-<table class="table">
+  <table class="table">
     <thead>
       <tr>
         <th scope="col">Id</th>
@@ -18,12 +18,11 @@
         <td>{{list.lastname}}</td>
         <td>{{list.phoneno}}</td>
         <td>{{list.email}}</td>
-        <td> <button type="button" (click)="editeEmploye(list)" >Edit</button>
-          <button type="button" (click)="onDelete(list.id)">Delete</button>
-          <button type="button" (click)=" employedetails(list)">Details</button></td>
-
+        <td> <button type="button" class="btn btn-success me-2" (click)="editeEmploye(list)">Edit</button>
+          <button type="button" class="btn btn-danger me-2" (click)="onDelete(list.id)">Delete</button>
+          <button type="button" class="btn btn-primary me-2" (click)=" employedetails(list)">Details</button>
+        </td>
       </tr>
-
     </tbody>
   </table>
 </div>

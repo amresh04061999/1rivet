@@ -1,0 +1,33 @@
+<div class="p-5">
+    <button mat-raised-button color="primary" (click)="adduser()">Add user</button><BR>
+    <table class="table mt-4">
+        <thead>
+            <tr>
+                <th scope="col">#ID</th>
+                <th scope="col">FIRSTNAME</th>
+                <th scope="col">LASTNAME</th>
+                <th scope="col">EMAIL</th>
+                <th scope="col">PHONE NO</th>
+                <th scope="col">PASSWORD</th>
+                <th scope="col">ACTION</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>Mark</td>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>
+                    <button type="button" class="btn btn-primary" (click)="adduser()">EDIT</button>
+                    <button type="button" class="btn btn-danger ms-3">DELETE</button>
+                    <button type="button" class="btn btn-success ms-3">DETAILS</button>
+                </td>
+
+            </tr>
+
+        </tbody>
+    </table>
+</div>
