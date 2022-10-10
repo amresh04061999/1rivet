@@ -10,8 +10,25 @@ export class UserService {
     this.baseUrl = 'http://localhost:3000/';
   }
 
-  public adduser(user: user[]): Observable<any> {
+
+  public getuser(): Observable<user[]> {
     const baseUrl: string = this.baseUrl + 'user';
-    return this._http.post(baseUrl, user);
+    return this._http.get<user[]>(baseUrl);
   }
+  public adduser(user: user): Observable<user> {
+    const baseUrl: string = this.baseUrl + 'user';
+    return this._http.post<user>(baseUrl, user);
+  }
+
+  updateUser(user: user, id: number): Observable<user> {
+    const baseUrl: string = this.baseUrl + 'user/' + id;
+    return this._http.put<user>(baseUrl, user)
+  }
+  deleteUser(id: number): Observable<user> {
+    const baseUrl: string = this.baseUrl + 'user/' + id;
+    return this._http.delete<user>(baseUrl);
+
+  }
+
+
 }

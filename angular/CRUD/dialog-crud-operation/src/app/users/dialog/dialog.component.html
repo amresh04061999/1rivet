@@ -1,37 +1,36 @@
 <div class="conainer">
-    <h1 mat-dialog-title>ADD USER FORM</h1>
-    <div mat-dialog-content>
-        <form [formGroup]="userform">
-            <mat-form-field appearance="outline">
-                <mat-label>FIRSTNAME</mat-label>
-                <input matInput placeholder="Enter firstName" formControlName="firstname" required>
-            </mat-form-field>
-            <mat-form-field appearance="outline">
-                <mat-label>LASTNAME</mat-label>
-                <input matInput placeholder="Enter LastName " formControlName="lastname" required>
-            </mat-form-field>
-            <mat-form-field appearance="outline">
-                <mat-label> ENTER YOUR EMAIL</mat-label>
-                <input matInput placeholder="pat@example.com" formControlName="email" required>
-            </mat-form-field>
-            <mat-form-field appearance="outline">
-                <mat-label>PHONE NO</mat-label>
-                <input matInput placeholder="Phone number" formControlName="phoneno" required>
-            </mat-form-field>
-            <mat-form-field appearance="outline">
-                <mat-label>ENTER YOUR PASSWORD</mat-label>
-                <input matInput formControlName="password">
-                <button mat-icon-button matSuffix [attr.aria-label]="'Hide password'">
-                </button>
-            </mat-form-field>
-            <div mat-dialog-actions>
-                <button type="submit" mat-raised-button mat-dialog-close color="primary"
-                    (click)=" adduser()">Save</button>
-                <button mat-raised-button color="accent" (click)="reset()">Reset</button>
-                <button mat-raised-button mat-dialog-close color="warn">Close</button>
-            </div>
-        </form>
+  <h1 mat-dialog-title>ADD USER FORM</h1>
+  <div mat-dialog-content>
+    <form [formGroup]="userform">
+      <mat-form-field appearance="outline">
+        <mat-label>FIRSTNAME</mat-label>
+        <input matInput placeholder="Enter firstName" formControlName="firstname" required>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>LASTNAME</mat-label>
+        <input matInput placeholder="Enter LastName " formControlName="lastname" required>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label> ENTER YOUR EMAIL</mat-label>
+        <input matInput placeholder="pat@example.com" formControlName="email" required>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>PHONE NO</mat-label>
+        <input matInput placeholder="Phone number" formControlName="phoneno" required>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>ENTER YOUR PASSWORD</mat-label>
+        <input matInput formControlName="password">
+        <button mat-icon-button matSuffix [attr.aria-label]="'Hide password'">
+        </button>
+      </mat-form-field>
+      <div mat-dialog-actions>
+        <button type="submit" mat-raised-button color="primary" (click)=" saveUser()">{{action}}</button>
+        <button mat-raised-button color="accent" (click)="reset()">Reset</button>
+        <button mat-raised-button mat-dialog-close color="warn">Close</button>
+      </div>
+    </form>
 
-    </div>
+  </div>
 
 </div>

@@ -14,9 +14,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { HttpClientModule } from '@angular/common/http';
 import { UserService } from './srvices/user.service';
+import { DeleteDialogComponent } from './delete-dialog/delete-dialog.component';
 
 @NgModule({
-  declarations: [UsersComponent, UserlistComponent, DialogComponent],
+  declarations: [UsersComponent, UserlistComponent, DialogComponent, DeleteDialogComponent],
   imports: [
     CommonModule,
     UsersRoutingModule,

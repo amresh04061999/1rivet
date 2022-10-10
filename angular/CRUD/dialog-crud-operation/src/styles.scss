@@ -12,3 +12,12 @@ body {
 /* Importing Bootstrap SCSS file. */
 @import "assets/scss/base/index";
 @import "assets/scss/vander/index";
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
