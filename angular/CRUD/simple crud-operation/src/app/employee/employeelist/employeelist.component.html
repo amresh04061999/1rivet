@@ -13,12 +13,14 @@
     </thead>
     <tbody>
       <tr *ngFor="let list of employee">
+        <!-- <button type="submit" (click)="editeEmploye(list)"> -->
         <td>{{list.id}}</td>
-        <td>{{list.firstname}}</td>
-        <td>{{list.lastname}}</td>
+        <td><a (click)="editeEmploye(list)" class="cursor-pointer">{{list.firstname}}</a></td>
+        <td><a (click)="editeEmploye(list)">{{list.lastname}}</a></td>
         <td>{{list.phoneno}}</td>
         <td>{{list.email}}</td>
-        <td> <button type="button" class="btn btn-success me-2" (click)="editeEmploye(list)">Edit</button>
+        <!-- </button> -->
+        <td>
           <button type="button" class="btn btn-danger me-2" (click)="onDelete(list.id)">Delete</button>
           <button type="button" class="btn btn-primary me-2" (click)=" employedetails(list)">Details</button>
         </td>
