@@ -14,7 +14,7 @@ export class DialogComponent implements OnInit {
   userform: FormGroup;
   public id: any;
 
-  public action: string = 'save'
+  public action: string = 'save';
   constructor(
     @Inject(MAT_DIALOG_DATA) public editedata: user,
     private fb: FormBuilder,
@@ -30,15 +30,12 @@ export class DialogComponent implements OnInit {
       password: ['', [Validators.required]],
     });
 
-    this.router.params.subscribe(params => {
-      this.id = params['id'];
-    })
     // console.log(this.id);
 
     // console.log(this.editedata)
 
     if (this.editedata) {
-      this.action = 'update'
+      this.action = 'update';
       this.userform.controls['firstname'].patchValue(this.editedata.firstname);
       this.userform.controls['lastname'].patchValue(this.editedata.lastname);
       this.userform.controls['phoneno'].patchValue(this.editedata.phoneno);
@@ -48,45 +45,46 @@ export class DialogComponent implements OnInit {
     // console.log(this.editedata.id)
   }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
+
   public saveUser() {
-    if (this.userform.valid) {
-      if (this.editedata.id) {
-        this.userservices.updateUser(this.userform.value, this.editedata.id).subscribe({
-          next: (value) => {
-            console.log(value)
-            this.dilog.close('update');
-            this.reset();
-          },
-          error: (error) => {
-          },
-          complete: () => {
-            alert('edite user successfully ')
-          }
-        })
-      }
-      else {
+    if (!this.editedata) {
+      if (this.userform.valid) {
         this.userservices.adduser(this.userform.value).subscribe({
           next: (value) => {
-            console.log(value)
+            // console.log(value);
             this.dilog.close('save');
             this.reset();
           },
-          error: (error) => {
-          },
+          error: (error) => {},
           complete: () => {
-            alert('add user successfully ')
-          }
+            alert('Add user successfully ');
+          },
         });
       }
+    } else {
+      this.edituser();
     }
+  }
+
+  public edituser() {
+    this.userservices
+      .updateUser(this.userform.value, Number(this.editedata.id))
+      .subscribe({
+        next: (value) => {
+          // console.log(value);
+          this.dilog.close('update');
+          this.reset();
+        },
+        error: (error) => {},
+        complete: () => {
+          alert('Edit user successfully ');
+        },
+      });
   }
 
   // reset form
   public reset() {
     this.userform.reset();
   }
-
-
-
 }

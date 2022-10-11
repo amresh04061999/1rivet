@@ -14,81 +14,72 @@ import { user } from '../user.model';
 })
 export class UserlistComponent implements OnInit {
   public userlist: user[];
-  constructor(public dialog: MatDialog,
+  constructor(
+    public dialog: MatDialog,
     private userservices: UserService,
     private activaterouter: ActivatedRoute,
     private router: Router
   ) {
-
-    this.userlist = []
-
+    this.userlist = [];
   }
 
   ngOnInit(): void {
     this.getuser();
   }
 
-
   // Open dilog Box
   adduser() {
-    this.dialog.open(DialogComponent, {
-    })
-    // .afterClosed().subscribe(value => {
-    //   if (value === 'save') {
-    //     this.getuser()
-    //   }
-
-    // })
-
+    this.dialog
+      .open(DialogComponent, {})
+      .afterClosed()
+      .subscribe((value) => {
+        if (value === 'save') {
+          this.getuser();
+        }
+      });
   }
 
   // edit user  and pass object in dilog box / open dialog box
   public editUser(users: user) {
     // this.router.navigate(['user/edit/' + users.id])
-    this.dialog.open(DialogComponent, {
-      data: users
-    })
-    // .afterClosed().subscribe(value => {
-    //   if (value === 'update') {
-    //     this.getuser()
-    //   }
-    // })
-
+    this.dialog
+      .open(DialogComponent, {
+        data: users,
+      })
+      .afterClosed()
+      .subscribe((value) => {
+        if (value === 'update') {
+          this.getuser();
+        }
+      });
   }
-
 
   //  Delete user
   public onDelete(id: any) {
     this.userservices.deleteUser(id).subscribe({
       next: (value) => {
-        this.getuser();
+        this.dialog.open(DeleteDialogComponent, {});
       },
       error: (res) => {
-        alert('fail')
+        alert('fail');
       },
 
-      complete: () => {
-        this.dialog.open(DeleteDialogComponent, {
-        })
-      },
-    })
-
+      complete: () => {},
+    });
   }
   // get user list
   public getuser() {
     this.userservices.getuser().subscribe({
       next: (res) => {
         this.userlist = res;
-        console.log(res)
+        console.log(res);
       },
       error: (res) => {
-        alert('fail')
+        alert('fail');
       },
       complete: () => {
         // alert('success')
       },
-    })
+    });
   }
-
-
 }

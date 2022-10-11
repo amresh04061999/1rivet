@@ -1,52 +1,12 @@
 {
   "user": [
     {
-      "firstname": "manish",
-      "lastname": "patel",
-      "phoneno": "wewrwr",
-      "email": "amresg@gmail",
-      "password": "53465",
-      "id": 4
-    },
-    {
       "firstname": "amresh",
-      "lastname": "prasad",
-      "phoneno": "66778993344",
-      "email": "amresh@gmail.com",
-      "password": "admin",
-      "id": 6
-    },
-    {
-      "firstname": "amresh",
-      "lastname": "vfvdfv",
-      "phoneno": "66778993344",
-      "email": "amresh@gmail.com",
-      "password": "admin",
-      "id": 7
-    },
-    {
-      "firstname": "raviccccccccdcdcdc",
-      "lastname": "singhgcdcd",
-      "phoneno": "558688546689",
-      "email": "shivam@gmail.com",
-      "password": "admin",
-      "id": 8
-    },
-    {
-      "firstname": "ravi",
-      "lastname": "singhgsxsxsxs",
-      "phoneno": "558688546689",
-      "email": "shivam@gmail.com",
-      "password": "admin",
-      "id": 9
-    },
-    {
-      "firstname": "ayushddvdv",
-      "lastname": "patel",
-      "phoneno": "wewrwr",
-      "email": "amresg@gmail",
-      "password": "53465",
-      "id": 10
+      "lastname": "xs",
+      "phoneno": "344556787654567",
+      "email": "amresh",
+      "password": "i456789",
+      "id": 1
     }
   ]
 }

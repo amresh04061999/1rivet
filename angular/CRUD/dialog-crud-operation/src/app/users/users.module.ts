@@ -15,9 +15,15 @@ import { MatInputModule } from '@angular/material/input';
 import { HttpClientModule } from '@angular/common/http';
 import { UserService } from './srvices/user.service';
 import { DeleteDialogComponent } from './delete-dialog/delete-dialog.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
-  declarations: [UsersComponent, UserlistComponent, DialogComponent, DeleteDialogComponent],
+  declarations: [
+    UsersComponent,
+    UserlistComponent,
+    DialogComponent,
+    DeleteDialogComponent,
+  ],
   imports: [
     CommonModule,
     UsersRoutingModule,
@@ -28,6 +34,7 @@ import { DeleteDialogComponent } from './delete-dialog/delete-dialog.component';
     MatInputModule,
     ReactiveFormsModule,
     HttpClientModule,
+    MatIconModule,
   ],
   providers: [UserService],
 })
